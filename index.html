@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FLASHBULB</title>
+    <link rel="icon" type="image/x-icon"  href="public/favicon-f.png">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+</style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+(function () {
+	$('.hamburger-menu').on('click', function() {
+		$('.bar').toggleClass('animate');
+		alert(1);
+    var mobileNav = $('.mobile-nav');
+    mobileNav.toggleClass('hide show');
+	})
+})();
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 260) {
+        $(".nav-light").addClass("lightHeader");
+    } else {
+        $(".nav-light").removeClass("lightHeader");
+    }
+});
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 260) {
+        $(".nav-dark").addClass("darkHeader");
+    } else {
+        $(".nav-dark").removeClass("darkHeader");
+    }
+}); 
+   
+</script>	
+    
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.jsx"></script>
+		
+    
+  </body>
+</html>
