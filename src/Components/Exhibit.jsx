@@ -27,6 +27,7 @@ function Exhibit(props) {
               <Link to={'/project/' + NameEntry.project}>[{NameEntry.project}] #{NameEntry.number} </Link>
               <br />
               <p className="artblockstext"><a href={"https://generator.artblocks.io/" + NameEntry.token} target="_blank">watch on artblocks &rarr;</a>  </p> 
+              <p className="artblockstext"><a href={"https://www.artblocks.io/token/" + NameEntry.token} target="_blank">visit page on artblocks &rarr;</a>  </p> 
         </div>
         
         <div className="votebox">
