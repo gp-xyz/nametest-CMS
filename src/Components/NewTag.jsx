@@ -89,7 +89,7 @@ export default function NewTag(props) {
             <img alt="subject" width="200" height="auto" src={imgURL} /><br /><p className="artblockstext"><a href={"https://generator.artblocks.io/" + tokex} target="_blank">watch on artblocks &rarr;</a>  </p>
             Name: <input type="text" values={myName} onChange={handleNameChange}></input>
 
-            <Link to={{ pathname: '/', key: new Date().getTime() }}><button onClick={submitObj} disabled={myName.length === 0}>Submit</button></Link>
+            <Link to={{ pathname: '/newest', key: new Date().getTime() }}><button onClick={submitObj} disabled={myName.length === 0}>Submit</button></Link>
           </p>
         </div>
       </div>

@@ -8,9 +8,9 @@ function About(props) {
   return (
 <div>
   <div className={'general-' + props.theme}>
-   
+   <p><b>TLDR: give art a title. appreciate it. enjoy it. connect. vote on others</b></p>
     <p>
-      Flashbulb allows you to <Link to="/newtag">add your own interpretation</Link> for the title of any artwork from Art Blocks. Users are encouraged to submit nominal suggestions for their chosen generative tokens. Elevating an artwork with a creative contribution can <i>give a piece the attention it deserves.</i>
+      Flashbulb allows you to <Link to="/newtag">add your own interpretation</Link> for the title of any artwork from Art Blocks. Users are encouraged to submit nominal suggestions for their chosen generative tokens. Elevating an artwork with a creative contribution can give a piece the attention it deserves.
     </p>
     <p>
       Emotive buttons are available to provide feedback on the title suggestions of others. The collective tallies beget the ranking order.

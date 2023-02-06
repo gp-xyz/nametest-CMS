@@ -42,6 +42,8 @@ function Router() {
         <Route exact path="/" element={<Rankings sortstyle='Grail' author={author} authorvotes={authorVotes} theme={myTheme}/>} />
           
         <Route path="/weekly" element={<Weekly sortstyle='Grail'  author={author} authorvotes={authorVotes} theme={myTheme}/>} />
+
+        <Route path="/newest" element={<Weekly sortstyle='Newest'  author={author} authorvotes={authorVotes} theme={myTheme}/>} />
           
         <Route path="/newtag" element={<NewTag  author={author} theme={myTheme}/>} />
           

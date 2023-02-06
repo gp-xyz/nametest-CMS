@@ -59,10 +59,9 @@ export default function Nav({ navSignedIn, assignTheme }) {
   <ul className="menu">
         <li><div className="name-m"><h1>flashbulb</h1></div></li>  
         <li><div className="tagline-m">illuminating digital artwork</div></li>
-        <li><Link to="/">best titles ever</Link></li>
-        <li><Link to="/weekly">7-day rolling list</Link></li>
+        <li><Link to="/">best titles ever 🐐🐐</Link></li>
+        <li><Link to="/newest">brand new 🔥</Link></li>
         <li><Link to="/about">what's this all about?</Link></li>
-        <li><Link to="/newtag">&#43;ADD YOUR ART</Link></li>
         <li><Link to="/newtag"><button className="addbutton" onClick={handleArtButton}>{cta}</button></Link></li>
 
       </ul>
