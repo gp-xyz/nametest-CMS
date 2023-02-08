@@ -72,30 +72,50 @@ export default function NewTag(props) {
   return (
 
   <div className={'general-' + props.theme}>
-  <div>
-    Select the project and token number. Then enter your title and submit. Or look for a <button onClick={randomizeSel}>RANDOM</button> source of inspiration.
+
+    
 
     {(typeof data === 'undefined') ? (
       <p>Loading..</p>
     ) : (
-      <div className="row">
-        Author: {props.author}
-        <div className="col-md-4">
-          <Select options={data} onChange={handleProjectSelect} value={selection} defaultValue={selection} />
+      <div className="newForm">
+    <h3>Add Artwork</h3>
+      <div className="inputform">
+        
+        <div className="entry-line">
+        <label>Name:</label> <input type="text" values={myName} onChange={handleNameChange}></input>
         </div>
-        <div>
-          <p> {selection.sel.label}#
-            <input type="number" placeholder="which token" value={token} onChange={handleTokenSelect} /><br />Image {imgURL} :<br />
-            <img alt="subject" width="200" height="auto" src={imgURL} /><br /><p className="artblockstext"><a href={"https://generator.artblocks.io/" + tokex} target="_blank">watch on artblocks &rarr;</a>  </p>
-            Name: <input type="text" values={myName} onChange={handleNameChange}></input>
+        
+        <div className="entry-line">
+        <label>Author:</label> {props.author}
+        </div>
+        
+        <div className="selectionbox">
+          
+          <Select options={data} onChange={handleProjectSelect} placeholder="Select project..." />
+        </div>
+        
+        <div className="entry-line">
+          {selection.sel.label}#
+          
+            <input type="number" placeholder="which token" value={token} onChange={handleTokenSelect} />
+          
+            <button onClick={submitObj} disabled={myName.length === 0} className='addbutton'>S<Link to={{ pathname: '/newest', key: new Date().getTime() }}>ubmit</Link></button>
+          </div>
+        </div>
+            <div className="art">
+            <img alt="subject" width="200" height="auto" src={imgURL} />
+            
+            <p className="artblockstext"><a href={"https://generator.artblocks.io/" + tokex} target="_blank">watch on artblocks &rarr;</a>  </p>
+            </div>
 
-            <Link to={{ pathname: '/newest', key: new Date().getTime() }}><button onClick={submitObj} disabled={myName.length === 0}>Submit</button></Link>
-          </p>
-        </div>
+            
+          
+          
       </div>
     )
     }
-  </div>
+
 </div>
 
   )

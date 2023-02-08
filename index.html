@@ -30,17 +30,18 @@ $(window).scroll(function() {
     } else {
         $(".nav-light").removeClass("lightHeader");
     }
-});
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 260) {
+      if (scroll >= 260) {
         $(".nav-dark").addClass("darkHeader");
     } else {
         $(".nav-dark").removeClass("darkHeader");
     }
-}); 
-   
+  if (scroll >= 260) {
+        $(".addbutton").addClass("smallerbutton");
+    } else {
+        $(".addbutton").removeClass("smallerbutton");
+    }
+});
+
 </script>	
     
   </head>

@@ -2,9 +2,9 @@ import React from "react";
 import grail from '/img/diamond-fine.png'
 import ham from '/img/ham-happy.png'
 import tomato from '/img/tomato-shiny.png'
-import grailclicked from '/img/diamond-glow.png'
+import grailclicked from '/img/diamond-hands.png'
 import hamclicked from '/img/ham-glow.png'
-import tomatoclicked from '/img/tomato-glow.png'
+import tomatoclicked from '/img/tomato-splot.png'
 
 //what do we pass to a vote button? style. tagid
 export default function VoteButton(props) {

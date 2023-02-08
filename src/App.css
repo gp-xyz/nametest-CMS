@@ -14,6 +14,13 @@ h1 {
 
 h2 {
   color: #777;
+  font-weight: 400;
+}
+
+h3 {
+  color:black;
+  font-size:32px;
+  font-weight:300;
 }
 
 
@@ -60,11 +67,6 @@ a:hover, button:hover {
   background-color: #fff;
 }
 
-.themebox button:hover, .voteButton:hover {
-  background-color:transparent;
-}
-
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -80,13 +82,29 @@ a:hover, button:hover {
   color: #61dafb;
 }
 .addbutton {
-  background-color: green;
+  margin: 15px 18px 5px -5px;
+  padding: 10px 10px;
   border: 2px solid darkgreen;
+  background-color: #eee;
   border-radius: 5px;
-  color: white;
-  padding: 10px 20px;
-  font-size: 18px;
+  width:100px;
+  font-size: 17px;
   cursor: pointer;
+}
+.addbutton:hover {
+  background-color: transparent;
+  border: 2px solid #f55176;
+  color: #f55176;
+}
+
+.smallerbutton {
+  position:absolute;
+  right:-186px;
+  top: 85px;
+  margin:0px;
+  padding:5px 10px;
+  width:90px;
+  font-size: 13px;
 }
 
 nav img {
@@ -139,13 +157,13 @@ nav img {
 
 
 .nav-light.lightHeader {
-    height: 150px;
+    height: 140px;
     background-color: whitesmoke;
     font-size:85%;
 }
 
 .nav-dark.darkHeader {
-    height: 150px;
+    height: 140px;
     background: #333;
     font-size:85%;
 }
@@ -181,24 +199,26 @@ header.entry-header {
   display: block;
   clear: both;
   position: relative;
-  width: 90%;
+  margin:300px auto 15px;
+  padding:15px;
   border-top: 1px solid #ccc;
   background-color: #fff;
   min-height: 700px;
-  margin:15px 0;
-  padding:15px;
-  margin-top: 300px;
+  width: 85%;
 }
 .general-dark {
-display: block;
+  display: block;
   clear: both;
   position: relative;
-  width: 90%;
-  background-color: #303031;
-  margin-top: 300px;
-  min-height: 700px;
-  margin:15px 0;
+  margin:300px auto 15px;
   padding: 0;
+  width: 85%;
+  
+  background-color: #303031;
+  
+  min-height: 700px;
+  
+  
 }
 
 .message-box {
@@ -268,16 +288,21 @@ button {
   font-family: 'Rubik', sans-serif;
 }
 button:hover {
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 .votebutton{
   padding: 5px;
   background-color: transparent;
 }
+
+.votebutton:hover {
+  background-color:transparent;
+}
+
 .buttonImage:hover {
   opacity: 0.8;
-  rotate: 12deg;
+  rotate: 0deg;
 }
 
 img.buttonImage {
@@ -353,8 +378,9 @@ img.buttonImage {
 display:flex;
 width: 100%;
 height: auto;
-padding: 0;
 margin: 20px 0 100px;
+padding: 0;
+border-bottom: 35px transparent solid;
 object-fit: contain;
 }
 .art img {
@@ -365,14 +391,19 @@ object-fit: contain;
 
 .votebox {
   position: absolute;
-  right: 0;
+  right: 25px;
   bottom:-5px;
   display:block;
   float:right;
   min-height: 130px;
   margin: 30px 0 10px 0;
-
 }
+.votebox p {
+  text-align:left;
+  margin-left:10px;
+  letter-spacing:2px;
+  text-transform: uppercase;
+}  
 
 .tagimage{
   float:bottom;
@@ -384,6 +415,23 @@ object-fit: contain;
 .newentry-dark{
   background-color: #303031;
   color:#fff;
+}
+
+.newForm {
+  background-color: purple;
+  margin:20px auto;
+  display: block;
+  clear: both;
+  position: relative;
+  width: 80%;
+}
+.inputform {
+  background-color: brown;
+  margin:20px;
+}
+
+.entry-line {
+  margin: 10px 0;
 }
 
 .bigtable-light{
@@ -433,7 +481,9 @@ object-fit: contain;
    width: 100%;
   height: auto;
 }
-
+.themebox a:hover {
+  background-color:transparent;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -451,6 +501,11 @@ object-fit: contain;
 /* smalldesk  smalldesk    smalldesk  smalldesk    smalldesk  smalldesk     */
 @media screen and (max-width: 1200px) { 
 
+.smallerbutton {
+  right:-145px;
+  top: 90px;
+}
+  
 .bigtable-light, .bigtable-dark {
   margin:0;
   padding: 0 10vw;
@@ -472,11 +527,11 @@ margin:20px auto 110px;}
 
 
 .themebox{
-  right: 280px;
+  right: 240px;
   width: 80px;
 }
 
-
+}
 
 /* tablet tablet    tablet tablet  tablet tablet  tablet tablet  */
 @media screen and (max-width: 900px) { 
@@ -490,8 +545,6 @@ li a {
   margin-top: 0px;
   width: 39%;
 }  
- 
-
   
 .nav-light, .nav-dark {
   height: 190px;
@@ -515,31 +568,41 @@ li a {
   text-transform:uppercase;
 }
 
+.themebox {
+  position: fixed;
+  right:90px;
+  top: 20px;
+}
+  
+.themebox img {
+  width: 50px;
+  height: 67px;
+} 
+.addbutton {
+  margin: 15px 18px 5px -12px;
+  padding: 9px 9px;
+  font-size: 16px;
+}
+.smallerbutton {
+  right:-86px;
+  top: 55px;
+  width: 52px !important;
+  font-size: 15px;
+}
+  
 .bigtable-light, .bigtable-dark {
   padding: 0 3vw;
   width: 93vw;
 }
 
 
-  
-.themebox {
-  position: fixed;
-  right:-2px;
-  top: 86px;
-}
-  
-.themebox img {
-  width: 50px;
-  height: 67px;
-}
-
 img.buttonImage {
   height: 65px;
   width: 65px;
 }  
-
-.menuToggle
-{
+ 
+  
+.menuToggle {
   display: block;
   position: absolute;
   top: 10px;
@@ -549,8 +612,7 @@ img.buttonImage {
   user-select: none;
 }
 
-.menuToggle input
-{
+.menuToggle input {
   display: block;
   width: 30px;
   height: 30px;
@@ -619,7 +681,7 @@ img.buttonImage {
  
 .menu
 { position: absolute;
-  width: 200px;
+  width: 210px;
   margin: -100px -16px 0 0;
   padding: 60px 50px 60px 50px;
   padding-top: 84px;
@@ -645,6 +707,7 @@ img.buttonImage {
   
 .menu li a {
     text-decoration: none;
+    text-align:left;
 }
  
 .menuToggle input:checked ~ ul
@@ -676,7 +739,6 @@ li.stay-in {
 }
 
 
-
   
 }
 
@@ -688,14 +750,16 @@ li.stay-in {
 h2, label {
   padding-left:10px;
 }
-  
+.logo {
+  width: 50%;
+}    
 .nav-light.lightHeader {
-    height: 140px;
+    height: 130px;
     font-size:82%;
 }
 
 .nav-dark.darkHeader {
-    height: 140px;
+    height: 130px;
     font-size:82%;
 }  
 
@@ -708,8 +772,27 @@ h2, label {
   font-size: 85%;
 }   
 
-  
+.tagline-m {display:none;} 
+.tagline {display:none;}
 
+.themebox {
+  right:70px;
+  top: 20px;
+} 
+ .themebox img {
+  width: 42px;
+  height: 57px;
+}  
+
+.addbutton {
+  margin-left:10px;
+  width:52px;
+}
+.smallerbutton {
+  right:-66px;
+  top: 55px;
+}
+    
 .bigtable-light, .bigtable-dark{
   padding: 0em;
   width: 100%;
@@ -739,6 +822,14 @@ bottom: 140px;
 left: 0px;
 margin-top: 20px;
 padding-left:20px;
+}
+.projectLink{
+
+color:red;
+}
+
+.newForm {
+  width:90%;
 }
   
 .votebox {
