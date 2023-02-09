@@ -32,12 +32,14 @@ function Router() {
  
   return (
     <BrowserRouter>
-     
+      <body className="dark">
         <Nav navSignedIn={recvNavSignIn} assignTheme={ (parm) => {
       console.log('wtf' + parm)
       setMyTheme(parm)
+      document.documentElement.style.backgroundColor = parm === 'light' ? 'whitesmoke' : '#303031';
     }}/>
-       
+
+      
         <Routes>
         <Route exact path="/" element={<Rankings sortstyle='Grail' author={author} authorvotes={authorVotes} theme={myTheme}/>} />
           
@@ -61,7 +63,7 @@ function Router() {
           
         </Routes> 
         <Footer theme={myTheme}/>
-    
+   </body> 
     </BrowserRouter>
   );
 }

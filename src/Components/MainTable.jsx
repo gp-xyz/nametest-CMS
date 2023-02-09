@@ -13,15 +13,38 @@ export default function MainTable(props) {
 
   // props.data.tags.sort((a, b) => (a.datetime < b.datetime) ? 1 : -1)
   let mosthams = () => {
-    setListData(() => props.data.tags.concat().sort((a, b) => (a.hamcount < b.hamcount) ? 1 : -1))
-    console.log('WE JUST SORTED BY HAM')
+    setListData(() => props.data.tags.concat().sort((a, b) => {
+      if (a.hamcount === b.hamcount) {
+        if (a.grailcount === b.grailcount){
+          return (a.tomatocount > b.tomatocount) ? 1 : -1;
+        }
+        return (a.grailcount < b.grailcount) ? 1 : -1;
+      }
+      return (a.hamcount < b.hamcount) ? 1 : -1;
+    }));
+   
 
   }
   let mostGrails = () => {
-    setListData(() => props.data.tags.concat().sort((a, b) => (a.grailcount < b.grailcount) ? 1 : -1))
+    setListData(() => props.data.tags.concat().sort((a, b) => {
+      if (a.grailcount === b.grailcount) {
+        if(a.tomatocount === b.tomatocount){
+          return (a.hamcount < b.hamcount) ? 1 : -1;
+        }
+        return (a.tomatocount > b.tomatocount) ? 1 : -1;
+      }
+      return (a.grailcount < b.grailcount) ? 1 : -1;
+    }));
   }
   let leasttomatos = () => {
-    setListData(() => props.data.tags.concat().sort((a, b) => (a.tomatocount > b.tomatocount) ? 1 : -1))
+    // setListData(() => props.data.tags.concat().sort((a, b) => (a.tomatocount > b.tomatocount) ? 1 : -1))
+      setListData(() => props.data.tags.concat().sort((a, b) => {
+        if (a.tomatocount === b.tomatocount) {
+          return (a.grailcount + a.hamcount < b.grailcount + b.hamcount) ? 1 : -1;
+        }
+        return (a.tomatocount > b.tomatocount) ? 1 : -1;
+      }));
+
   }
   let newest = () => {
     setListData(() => props.data.tags.concat().sort((a, b) => (a.datetime < b.datetime) ? 1 : -1))
@@ -74,8 +97,15 @@ export default function MainTable(props) {
 
   }
   return (
-    <div className={"bigtable-" + props.theme} key="big1">-
-      <div><h2>{props.title}</h2></div>
+    <div className={"bigtable-" + props.theme} key="big1">
+      
+      
+
+      {(typeof listdata === 'undefined') ? (
+        <p>Loading..</p>
+      ) : (
+        <div>
+      <div><h2>{props.title} - {listdata.length} things</h2></div>
 
 
       <label>Sort by:&nbsp;
@@ -87,13 +117,9 @@ export default function MainTable(props) {
           ))}
         </select>
       </label>
-
-      {(typeof listdata === 'undefined') ? (
-        <p>Loading..</p>
-      ) : (
         <Exhibit listdata={listdata} author={props.author} authorvotes={props.authorvotes} theme={props.theme} />
 
-
+        </div>
       )}
 
 

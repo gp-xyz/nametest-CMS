@@ -100,7 +100,7 @@ export default function NewTag(props) {
           
             <input type="number" placeholder="which token" value={token} onChange={handleTokenSelect} />
           
-            <button onClick={submitObj} disabled={myName.length === 0} className='addbutton'>S<Link to={{ pathname: '/newest', key: new Date().getTime() }}>ubmit</Link></button>
+            <Link to={{ pathname: '/newest', key: new Date().getTime() }}><button onClick={submitObj} disabled={myName.length === 0} className='addbutton'>Submit</button></Link>
           </div>
         </div>
             <div className="art">
