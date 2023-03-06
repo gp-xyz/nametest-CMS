@@ -212,7 +212,7 @@ header.entry-header {
   clear: both;
   position: relative;
   margin:300px auto 15px;
-  padding: 0;
+  padding: 15px;
   width: 85%;
   
   background-color: #303031;

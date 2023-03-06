@@ -12,6 +12,7 @@ import ProjectList from './ProjectList';
 import Opinions from './Opinions';
 import MyTitles from './MyTitles';
 import Profile from './Profile'
+import CMS from './CMS'
 
 function Router() {
   const [author,setAuthor] = useState(null)
@@ -44,6 +45,8 @@ function Router() {
         <Route exact path="/" element={<Rankings sortstyle='Grail' author={author} authorvotes={authorVotes} theme={myTheme}/>} />
           
         <Route path="/weekly" element={<Weekly sortstyle='Grail'  author={author} authorvotes={authorVotes} theme={myTheme}/>} />
+
+          <Route path="/posts" element={<CMS />}/>} />
 
         <Route path="/newest" element={<Weekly sortstyle='Newest'  author={author} authorvotes={authorVotes} theme={myTheme}/>} />
           

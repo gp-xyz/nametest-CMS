@@ -60,6 +60,7 @@ export default function Nav({ navSignedIn, assignTheme }) {
         <li><div className="name-m"><h1>flashbulb</h1></div></li>  
         <li><div className="tagline-m">illuminating digital artwork</div></li>
         <li><Link to="/">best titles EVER</Link></li>
+        <li><Link to="/posts">blog</Link></li>
         <li><Link to="/newest">NEWEST entries</Link></li>
         <li><Link to="/about">what's this all about?</Link></li>
         
