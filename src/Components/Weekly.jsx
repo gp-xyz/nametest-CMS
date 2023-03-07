@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import MainTable from "./MainTable"
-
+import NameNav from './NameNav'
 function Weekly(props) {
     const [data,setData] = useState([{}])
     const [author,setAuthor] = useState(props.author)
@@ -22,7 +22,7 @@ function Weekly(props) {
       
    
     <div>
-      
+      <NameNav />
        <MainTable data={data} author={author} sortstyle={props.sortstyle} title="Weekly" authorvotes={props.authorvotes } theme={props.theme} />
     
     </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Select from 'react-select'
 import { Link } from 'react-router-dom'
+import NameNav from './NameNav'
 export default function NewTag(props) {
   const [data, setData] = useState([])
   const [selection, setSelection] = useState({ 'sel': { value: 1, label: 'default' } })
@@ -70,53 +71,62 @@ export default function NewTag(props) {
     // return 0
   }
   return (
+    <div>
+      <NameNav />
 
-  <div className={'general-' + props.theme}>
+      <div className={'general-' + props.theme}>
 
-    
 
-    {(typeof data === 'undefined') ? (
-      <p>Loading..</p>
-    ) : (
-      <div className="newForm">
-    <h3>Add Artwork</h3>
-      <div className="inputform">
-        
-        <div className="entry-line">
-        <label>Name:</label> <input type="text" values={myName} onChange={handleNameChange}></input>
-        </div>
-        
-        <div className="entry-line">
-        <label>Author:</label> {props.author}
-        </div>
-        
-        <div className="selectionbox">
-          
-          <Select options={data} onChange={handleProjectSelect} placeholder="Select project..." />
-        </div>
-        
-        <div className="entry-line">
-          {selection.sel.label}#
-          
-            <input type="number" placeholder="which token" value={token} onChange={handleTokenSelect} />
-          
-            <Link to={{ pathname: '/newest', key: new Date().getTime() }}><button onClick={submitObj} disabled={myName.length === 0} className='addbutton'>Submit</button></Link>
-          </div>
-        </div>
-            <div className="art">
-            <img alt="subject" width="200" height="auto" src={imgURL} />
-            
-            <p className="artblockstext"><a href={"https://generator.artblocks.io/" + tokex} target="_blank">watch on artblocks &rarr;</a>  </p>
-            </div>
 
-            
-          
-          
+        {(typeof data === 'undefined') ? (
+          <p>Loading..</p>
+        ) : (
+          <div>
+            <h3 className='text-2xl'>Add Artwork</h3>
+
+
+            <div className='w-3/4'>
+              <div className='bg-orange-200 flex flex-col md:flex-row '>
+                <div className='flex flex-col p-1 w-full md:w-4/5'>
+                  <label>AB Project</label>
+                  <Select options={data} onChange={handleProjectSelect} placeholder="Select project..." />
+                </div>
+                <div className='flex flex-col p-1'>
+                  <label>{selection.sel.label}#</label>
+
+                  <input type="number" value={token} onChange={handleTokenSelect} className='text-xl p-1 m-0 border-xl border-slate-200 ' />
+                </div>
+
+              </div>
+
+              <div className='py-3'>
+                <input type="text" values={myName} onChange={handleNameChange} placeholder='Enter your moniker here' className='text-4xl w-full py-3 px-1'></input>
+
+
+
+
+              </div>
+
+
+              <div className='py-1'>
+                <img alt="select art" width="auto" height="auto" src={imgURL} />
+
+                <p className='artblockstext'><a href={"https://generator.artblocks.io/" + tokex} target="_blank">watch on artblocks &rarr;</a>  </p>
+              </div>
+
+              <div className="flex justify-end">
+                <Link to={{ pathname: '/newest', key: new Date().getTime() }}>
+                  <button className="actionbutton" onClick={submitObj} disabled={myName.length === 0}>Submit</button>
+                </Link>
+              </div>
+
+
+            </div></div>
+
+        )
+        }
+
       </div>
-    )
-    }
-
-</div>
-
+    </div>
   )
 }

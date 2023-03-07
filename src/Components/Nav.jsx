@@ -4,13 +4,14 @@ import SIWE from "./SIWE";
 import Theme from "./Theme"
 import logo from "/img/fb-dk-100px.png";
 import { getCTA } from './util/RandomCTA'
+import "../App.css"
 export default function Nav({ navSignedIn, assignTheme }) {
   const [author, setAuthor] = useState(null)
   const [gauthor, gsetAuthor] = useState(null)
   const [myTheme, setMytheme] = useState('light')
   const [titleLink, setTitlelink] = useState("/titles/")
   const [opLink, setOpLink] = useState("/opinions/")
-  const [cta,SetCTA] = useState('GO')
+  const [cta, SetCTA] = useState('GO')
 
   useEffect(() => {
     SetCTA(getCTA())
@@ -21,7 +22,7 @@ export default function Nav({ navSignedIn, assignTheme }) {
   }, [author])
 
   const handleIt = (addr) => {
-   
+
     navSignedIn(addr)
     setAuthor(addr)
   }
@@ -32,7 +33,7 @@ export default function Nav({ navSignedIn, assignTheme }) {
   }
 
   const handleArtButton = () => {
-    const outobj = { 'button':'menu1','author':author,'cta_text': cta }
+    const outobj = { 'button': 'menu1', 'author': author, 'cta_text': cta }
     console.log('arting:')
     console.log(outobj)
     fetch(`https://disco.pythonanywhere.com/click`,
@@ -43,48 +44,38 @@ export default function Nav({ navSignedIn, assignTheme }) {
       })
   }
   return (
-    <nav className={"nav-"+myTheme}>
+   
+      <div className="grid grid-cols-1 md:grid-cols-5 my-3 w-full">
+        <div className="header-nav w-full col-span-4">
 
-		<div className="logo"> <img alt="bottomlogo" src={logo} width="150" /> <div className="tagline"> <h1>flashbulb</h1> illuminating digital artwork</div></div>     
-  
-<div className="header-nav">
-		
-  <div className="menuToggle">
-    
-    <input type="checkbox" />
-    <span> </span>
-    <span> </span>
-    <span> </span>
-    
-  <ul className="menu">
-        <li><div className="name-m"><h1>flashbulb</h1></div></li>  
-        <li><div className="tagline-m">illuminating digital artwork</div></li>
-        <li><Link to="/">best titles EVER</Link></li>
-        <li><Link to="/posts">blog</Link></li>
-        <li><Link to="/newest">NEWEST entries</Link></li>
-        <li><Link to="/about">what's this all about?</Link></li>
-        
 
-      </ul>
-       
-  
-{gauthor && <ul>
-          <li><Link to={titleLink}>[My Contributions]</Link></li>
 
-          <li><Link to={opLink}>[My Opinions]</Link></li>
-      </ul>}
-  
-        </div>  
-			
-    </div>
-       
-      <Theme callThemeBack={broadcastTheme} />
-  
-      <SIWE onSignIn={handleIt} />
-	
+          <ul className="menu">
 
-		
-    </nav>
-    
+            <li className="bg-blue-300"><Link className="nav-link" to="/">Home</Link></li>
+            <li className="bg-yellow-300"><Link className="nav-link" to="/posts">Chronicle</Link></li>
+            <li className="bg-red-500"><Link className="nav-link" to="/monikers">Monikers</Link></li>
+            <li className="bg-purple-300"><Link className="nav-link" to="/about">about</Link></li>
+
+
+          </ul>
+
+          
+
+
+        </div>
+        <div className="logo relative hidden md:inline-flex">
+           <img alt="bottomlogo" src={logo} /> 
+           
+           </div>
+
+
+
+
+
+      </div>
+
+
+
   );
 }

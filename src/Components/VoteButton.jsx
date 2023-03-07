@@ -38,13 +38,13 @@ export default function VoteButton(props) {
   }
 
   return (
-    <span className="buttonGroup">
-      <button className="voteButton">
+    
+      <button className="p-1 bg-transparent w-32 hover:opacity-80 border-2  border-b-0 border-r-0 m-1 hover:rotate-3">
         <img className="buttonImage" alt="none" width="auto" src={imgSource} onClick={toggleMe}
         />
 
       </button>
-    </span>
+   
 
 
   )

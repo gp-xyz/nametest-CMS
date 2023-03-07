@@ -14,30 +14,37 @@ function Exhibit(props) {
   return (
     listdata.map((NameEntry, id) => (
       // const imglink = 
-      <div className={"artcontainer-" + props.theme} key={NameEntry.id + 'div'}>
-        <span className='tagrank'> {(id + 1) } </span>
-        <span className='tagtitle'> {NameEntry.name} </span> 
+      <div className='grid-auto-flow-dense grid-rows-3 py-10 px-1' key={NameEntry.id + 'div'}>
+        <div className='flex flex-row items-center'>
+          <span className='tagrank text-6xl text-slate-600'> {(id + 1)} </span>
+          <span className='text-4xl p-2 m-1'> {NameEntry.name} </span>
+        </div>
 
 
-        <div className="art">
+        <div className="flex w-full h-auto my-4 pb-100px border-b-35px border-transparent">
           <img alt="art" src={"https://media.artblocks.io/" + NameEntry.token + ".png"} />
         </div>
-        
-        <div className='projectName'> 
-              <Link to={'/project/' + NameEntry.project}>[{NameEntry.project}]</Link> #{NameEntry.number} 
-              <br />
-              <p className="artblockstext"><a href={"https://generator.artblocks.io/" + NameEntry.token} target="_blank">watch on artblocks &rarr;</a>  </p> 
-              <p className="artblockstext"><a href={"https://www.artblocks.io/token/" + NameEntry.token} target="_blank">visit page on artblocks &rarr;</a>  </p> 
+
+        <div className='bottomthird grid grid-auto-flow-dense grid-cols-2 md:grid-cols-2'>
+          <div className=''>
+            <Link className='underline hover:cursor-pointer hover:text-red-400' to={'/project/' + NameEntry.project}>[{NameEntry.project}]</Link> #{NameEntry.number}
+            <br />
+            <p className="artblockstext"><a href={"https://generator.artblocks.io/" + NameEntry.token} target="_blank">watch on artblocks &rarr;</a>  </p>
+            <p className="artblockstext"><a href={"https://www.artblocks.io/token/" + NameEntry.token} target="_blank">visit page on artblocks &rarr;</a>  </p>
+          </div>
+
+          <div className="pr-5 pb-0">
+            <p>Reaction?</p>
+            <div className='flex flex-row'>
+              <VoteButton bstyle='grail' tagid={NameEntry.id} author={props.author} callback={updateOpinions} already={authorVotes[NameEntry.id + 'grail']} />
+              <VoteButton bstyle='ham' tagid={NameEntry.id} author={props.author} callback={updateOpinions} already={authorVotes[NameEntry.id + 'ham']} />
+              <VoteButton bstyle='tomato' tagid={NameEntry.id} author={props.author} callback={updateOpinions} already={authorVotes[NameEntry.id + 'tomato']} />
+            </div>
+          </div>
         </div>
-        
-        <div className="votebox">
-          <p>Reaction?</p>
-          <VoteButton bstyle='grail' tagid={NameEntry.id} author={props.author} callback={updateOpinions} already={authorVotes[NameEntry.id + 'grail']} />
-          <VoteButton bstyle='ham' tagid={NameEntry.id} author={props.author} callback={updateOpinions} already={authorVotes[NameEntry.id + 'ham']} />
-          <VoteButton bstyle='tomato' tagid={NameEntry.id} author={props.author} callback={updateOpinions} already={authorVotes[NameEntry.id + 'tomato']} />
-        </div>
+
       </div>
-        
+
     )
     ))
 }

@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react'
 import MainTable from "./MainTable"
-
+import NameNav from './NameNav'
 function Rankings(props) {
     const [data,setData] = useState([{}])
     const [author,setAuthor] = useState(props.author)
@@ -23,7 +23,7 @@ function Rankings(props) {
       
    
     <div>
-      
+      <NameNav />
        <MainTable data={data} author={author} sortstyle={props.sortstyle} title="All" authorvotes={props.authorvotes } theme={props.theme} />
     
     </div>

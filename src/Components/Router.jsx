@@ -13,7 +13,7 @@ import Opinions from './Opinions';
 import MyTitles from './MyTitles';
 import Profile from './Profile'
 import CMS from './CMS'
-
+import NameNav from './NameNav';
 function Router() {
   const [author,setAuthor] = useState(null)
   const [authorVotes,setAuthorVotes] = useState({})
@@ -34,6 +34,7 @@ function Router() {
   return (
     <BrowserRouter>
       <body className="dark">
+        
         <Nav navSignedIn={recvNavSignIn} assignTheme={ (parm) => {
       console.log('wtf' + parm)
       setMyTheme(parm)
@@ -42,17 +43,22 @@ function Router() {
 
       
         <Routes>
-        <Route exact path="/" element={<Rankings sortstyle='Grail' author={author} authorvotes={authorVotes} theme={myTheme}/>} />
+
+        <Route path="/" element={<About theme={myTheme} />} />
+
+        <Route path="/monikers" element={<Rankings sortstyle='Grail' author={author} authorvotes={authorVotes} theme={myTheme}/>} />
           
         <Route path="/weekly" element={<Weekly sortstyle='Grail'  author={author} authorvotes={authorVotes} theme={myTheme}/>} />
 
-          <Route path="/posts" element={<CMS />}/>} />
+          <Route path="/posts" element={<CMS />} />
 
         <Route path="/newest" element={<Weekly sortstyle='Newest'  author={author} authorvotes={authorVotes} theme={myTheme}/>} />
           
         <Route path="/newtag" element={<NewTag  author={author} theme={myTheme}/>} />
           
         <Route path="/about" element={<About theme={myTheme} />} />
+
+        
           
         <Route path="/project/:projectName" element={<Project author={author} authorvotes={authorVotes}  theme={myTheme}/>} />
           
