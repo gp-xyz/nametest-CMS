@@ -5,6 +5,7 @@ function Exhibit(props) {
   const [authorVotes, setAuthorVotes] = useState(props.authorvotes)
   useEffect(() => {
     setAuthorVotes(props.authorvotes)
+    console.log('we set new author')
 
   }, [props])
   const { listdata } = props
@@ -25,7 +26,7 @@ function Exhibit(props) {
           <img alt="art" src={"https://media.artblocks.io/" + NameEntry.token + ".png"} />
         </div>
 
-        <div className='bottomthird grid grid-auto-flow-dense grid-cols-2 md:grid-cols-2'>
+        <div className='bottomthird pl-2 grid grid-auto-flow-dense grid-cols-2 md:grid-cols-2'>
           <div className=''>
             <Link className='underline hover:cursor-pointer hover:text-red-400' to={'/project/' + NameEntry.project}>[{NameEntry.project}]</Link> #{NameEntry.number}
             <br />
@@ -34,7 +35,7 @@ function Exhibit(props) {
           </div>
 
           <div className="pr-5 pb-0">
-            <p>Reaction?</p>
+            <p className='text-sm md:text-lg'>Reaction?</p>
             <div className='flex flex-row'>
               <VoteButton bstyle='grail' tagid={NameEntry.id} author={props.author} callback={updateOpinions} already={authorVotes[NameEntry.id + 'grail']} />
               <VoteButton bstyle='ham' tagid={NameEntry.id} author={props.author} callback={updateOpinions} already={authorVotes[NameEntry.id + 'ham']} />

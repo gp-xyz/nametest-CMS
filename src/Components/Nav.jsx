@@ -52,10 +52,10 @@ export default function Nav({ navSignedIn, assignTheme }) {
 
         <ul className="menu">
 
-          <li className="bg-blue-300"><Link className="nav-link" to="/">Home</Link></li>
-          <li className="bg-yellow-300"><Link className="nav-link" to="/posts">Chronicle</Link></li>
-          <li className="bg-red-500"><Link className="nav-link" to="/monikers">Monikers</Link></li>
-          <li className="bg-purple-300"><Link className="nav-link" to="/about">about</Link></li>
+          <li className="bg-orange-500 menuitem"><Link className="nav-link" to="/">Home</Link></li>
+          <li className="bg-yellow-300 menuitem"><Link className="nav-link" to="/posts">Chronicle</Link></li>
+          <li className="bg-blue-300 menuitem"><Link className="nav-link" to="/monikers">Monikers</Link></li>
+          <li className="bg-purple-300 menuitemr"><Link className="nav-link" to="/about">about</Link></li>
 
 
         </ul>
@@ -71,7 +71,7 @@ export default function Nav({ navSignedIn, assignTheme }) {
         </div>
 
       </div>
-
+      <SIWE onSignIn={handleIt} hidden="true" />
 
 
 

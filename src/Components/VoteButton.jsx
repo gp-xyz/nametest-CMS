@@ -17,6 +17,7 @@ export default function VoteButton(props) {
     imgSource = clickedImg[props.bstyle]
   }
   let toggleMe = () => {
+    console.log('tog clicked')
     let postobj = { 'style': props.bstyle, 'tagid': props.tagid, 'author': props.author, 'toggle': "on" }
     if (props.already) {
       postobj['toggle'] = "flip"
@@ -39,9 +40,8 @@ export default function VoteButton(props) {
 
   return (
     
-      <button className="p-1 bg-transparent w-32 hover:opacity-80 border-2  border-b-0 border-r-0 m-1 hover:rotate-3">
-        <img className="buttonImage" alt="none" width="auto" src={imgSource} onClick={toggleMe}
-        />
+      <button className="p-1 bg-transparent w-32 hover:opacity-80 border-2  border-t-0 border-l-0 m-1 hover:rotate-3">
+        <img className="buttonImage" alt="none" width="auto" src={imgSource} onClick={toggleMe}/>
 
       </button>
    

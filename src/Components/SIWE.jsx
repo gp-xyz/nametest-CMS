@@ -66,7 +66,7 @@ const SIWE = ({ onSignIn }) => {
 
   return (
     <div >
-      {address ? (
+      {/* {address ? (
         // If the user's address is available, show it
         <div className="navelement"><p>Signed: <Link to="/profile">{address.substring(0, 5) + '..'}</Link>
           <button onClick={killAuthor}>Disconnect</button></p></div>
@@ -75,7 +75,7 @@ const SIWE = ({ onSignIn }) => {
         <div className="navelement"><p>using&nbsp;anon&nbsp;alias: <Link to="/profile">{username}</Link></p>
           <button onClick={handleSignIn}>Sign in with Ethereum</button><span><QuestionPop /></span></div>
       )}
-      {error && <p>Error: {error}</p>}
+      {error && <p>Error: {error}</p>} */}
 
       
     </div>
