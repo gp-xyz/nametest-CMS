@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import ChronPost from "./ChronPost";
 
 function CMS() {
   const [posts, setPosts] = useState([]);
+  const [authors, setAuthors] = useState({});
 
   useEffect(() => {
     fetch("https://johpat90.dreamhosters.com/wp-json/wp/v2/posts?_embed")
@@ -9,20 +11,32 @@ function CMS() {
       .then(data => {
         setPosts(data);
       });
+    fetch("https://johpat90.dreamhosters.com/wp-json/wp/v2/users")
+      .then(response => response.json())
+      .then(data => {
+        const authorData = {};
+        data.forEach(author => {
+          authorData[author.id] = author;
+        });
+        setAuthors(authorData);
+      });
   }, []);
+
+  const postsWithAuthors = posts.map(post => {
+    return {
+      ...post,
+      authorbox: authors[post.author]
+    };
+  });
 
   return (
     <div className='general-light'>
-      <h2>Recent WordPress Posts</h2>
-      <ul>
-        {posts.map(post => (
-          <li key={post.id}>
-            <h3 dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-            <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
-            <a href={post.link}>Read More</a>
-          </li>
+      <div className="text-xl">The Latest from Flashbulb</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        {postsWithAuthors.map(post => (
+          <ChronPost post={post} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

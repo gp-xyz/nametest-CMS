@@ -43,9 +43,9 @@
 }
 .namenavbutton{
   font-family: 'Arial', sans-serif;
-  @apply p-2 m-1 bg-yellow-100 drop-shadow hover:bg-yellow-50 hover:text-slate-700 hover:drop-shadow-none;
+  @apply text-xl p-2 m-1 bg-yellow-100 drop-shadow hover:bg-yellow-50 hover:text-slate-700 hover:drop-shadow-none;
 }
 .actionbutton{
   font-family: 'Arial', sans-serif;
-  @apply p-2 m-1 bg-blue-100 drop-shadow hover:bg-red-50 hover:text-slate-700 hover:drop-shadow-none;
+  @apply p-2 m-1 text-xl bg-blue-100 border-orange-500 border drop-shadow-lg hover:bg-red-50 hover:text-slate-700 hover:drop-shadow-none;
 }

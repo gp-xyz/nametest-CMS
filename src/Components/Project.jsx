@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import MainTable from "./MainTable"
 import {useParams} from 'react-router-dom'
-
+import NameNav from './NameNav'
 function Project(props) {
     const [data,setData] = useState([{}])
     const {projectName} = useParams()
@@ -23,8 +23,7 @@ function Project(props) {
   return (
       
    
-    <div>
-      
+    <div><NameNav />
        <MainTable data={data} author={author} sortstyle={props.style} title={projectName} authorvotes={props.authorvotes} theme={props.theme} />
     
     </div>

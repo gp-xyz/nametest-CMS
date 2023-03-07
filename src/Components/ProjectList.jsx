@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {Link} from 'react-router-dom'
+import NameNav from "./NameNav";
 function ProjectList(props) {
     const [data,setData] = useState([{}])
     
@@ -31,19 +32,19 @@ function ProjectList(props) {
     },[])
 
   return (
+      <div><NameNav />
       
-   
-    <div className={"projectlist-" + props.theme}>
+    <div className={"general-" + props.theme}>
       theme should be {props.theme}
       {(typeof data === 'undefined') ? (
         <p>Loading..</p>
       ) : (
         
-        <ul>
+        <div>
             {data.map(item => (
-                <li key={item.name}> <Link to={'/project/'+item.name}>{item.name} ({item.count}) </Link></li>
+                <div key={item.name}> <Link to={'/project/'+item.name}>{item.name} ({item.count}) </Link></div>
             ))}
-        </ul>
+        </div>
         
         
        
@@ -51,6 +52,8 @@ function ProjectList(props) {
 
 
     </div>
+      </div>
+   
   )
 }
 
