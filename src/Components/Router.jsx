@@ -14,6 +14,7 @@ import MyTitles from './MyTitles';
 import Profile from './Profile'
 import CMS from './CMS'
 import NameNav from './NameNav';
+import Post from './Post';
 function Router() {
   const [author,setAuthor] = useState(null)
   const [authorVotes,setAuthorVotes] = useState({})
@@ -61,6 +62,7 @@ function Router() {
         
           
         <Route path="/project/:projectName" element={<Project author={author} authorvotes={authorVotes}  theme={myTheme}/>} />
+        <Route path="/posts/:slug" element={<Post />} />
           
         <Route path="/projects" element={<ProjectList authorvotes={authorVotes} theme={myTheme}/>} />
           

@@ -52,3 +52,7 @@
 .menuitem {
   @apply border-b-slate-500 border-r-slate-500 border;
 }
+
+.blogtitle {
+  font-family:  'Bowlby One', sans-serif;
+}
