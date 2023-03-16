@@ -22,7 +22,7 @@ function Exhibit(props) {
         </div>
 
 
-        <div className="flex w-full h-auto my-4 pb-100px border-b-35px border-transparent">
+        <div className="flex w-full h-auto my-4 pb-0 md:pb-24 ">
           <img alt="art" src={"https://media.artblocks.io/" + NameEntry.token + ".png"} />
         </div>
 

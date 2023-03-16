@@ -12,9 +12,8 @@
   border-top: 1px solid #ccc;
   background-color: #fff;
   min-height: 700px;
-  width: 85%;
   font-family: 'Arial', sans-serif;
-  @apply p-5 m-6 min-h-screen;
+  @apply p-0 m-0 md:p-5 md:m-6 min-h-screen;
 }
 
 /* Dark theme */
@@ -41,14 +40,41 @@
 .artblockstext{
   @apply text-slate-500 text-sm hover:text-slate-400;
 }
-.namenavbutton{
+.namenavbutton {
   font-family: 'Arial', sans-serif;
-  @apply text-xl p-2 m-1 bg-yellow-100 drop-shadow hover:bg-yellow-50 hover:text-slate-700 hover:drop-shadow-none;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1.25rem;
+  background-color: #FFFFFF;
+  color: #333333;
+  border: 2px solid #CCCCCC;
+  box-shadow: none;
 }
-.actionbutton{
+
+.actionbutton {
   font-family: 'Arial', sans-serif;
-  @apply p-2 m-1 text-xl bg-blue-100 border-orange-500 border drop-shadow-lg hover:bg-red-50 hover:text-slate-700 hover:drop-shadow-none;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1.25rem;
+  background-color: #00c277;
+  color: #FFFFFF;
+  border: 2px solid #FFA500;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s ease-in-out;
+  
 }
+
+/* Add an animation that glows when hovered over */
+.actionbutton:hover {
+  box-shadow: 0px 0px 10px rgba(255, 165, 0, 0.75);
+}
+
+
+/* Add an animation that glows when hovered over */
+.actionbutton:hover {
+  box-shadow: 0px 0px 10px rgba(255, 165, 0, 0.75);
+}
+
 .menuitem {
   @apply border-b-slate-500 border-r-slate-500 border;
 }

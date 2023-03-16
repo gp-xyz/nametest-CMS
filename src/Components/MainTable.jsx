@@ -108,7 +108,7 @@ export default function MainTable(props) {
           <div >{props.title} - {listdata.length} things</div>
           <div >     
              <label>Sort by:&nbsp;
-            <select value={sortStyle} onChange={handleIt} className="bg-black text-red-500">
+            <select value={sortStyle} onChange={handleIt} className="bg-green-500">
               {items.map((item) => (
                 <option key={item} value={item}>
                   {item}

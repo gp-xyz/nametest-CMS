@@ -35,14 +35,14 @@ function ProjectList(props) {
       <div><NameNav />
       
     <div className={"general-" + props.theme}>
-      theme should be {props.theme}
+      <span className="text-2xl">Project ( n= )</span>
       {(typeof data === 'undefined') ? (
         <p>Loading..</p>
       ) : (
         
         <div>
             {data.map(item => (
-                <div key={item.name}> <Link to={'/project/'+item.name}>{item.name} ({item.count}) </Link></div>
+                <div key={item.name}>- <Link to={'/project/'+item.name}>{item.name} ({item.count}) </Link></div>
             ))}
         </div>
         

@@ -15,6 +15,7 @@ import Profile from './Profile'
 import CMS from './CMS'
 import NameNav from './NameNav';
 import Post from './Post';
+import Home from './Home';
 function Router() {
   const [author,setAuthor] = useState(null)
   const [authorVotes,setAuthorVotes] = useState({})
@@ -45,7 +46,7 @@ function Router() {
       
         <Routes>
 
-        <Route path="/" element={<About theme={myTheme} />} />
+        <Route path="/" element={<Home />} />
 
         <Route path="/monikers" element={<Rankings sortstyle='Grail' author={author} authorvotes={authorVotes} theme={myTheme}/>} />
           

@@ -65,12 +65,17 @@ export default function Nav({ navSignedIn, assignTheme }) {
 
       </div>
       <div className="logo relative hidden md:inline-flex h-full">
-        <div className="flex items-center w-52 bg-slate-700 rounded-md h-full">
-          <div className="text-white font-bold text-6xl md:text-8xl mx-3">F</div>
-          <div className="bg-red-500 w-20 h-20 rounded-full"> </div>
-        </div>
+  <div className="flex items-center w-52 bg-slate-700 rounded-md h-full">
+    <div className="text-white font-bold text-6xl md:text-8xl mx-3">F</div>
+    <div className="relative w-20 h-20">
+      <div className="bg-orange-500 w-20 h-20 rounded-full absolute inset-0"></div>
+      <div className="bg-yellow-300 w-16 h-16 rounded-full absolute inset-2"></div>
+      <div className="bg-blue-300 w-12 h-12 rounded-full absolute inset-4"></div>
+      <div className="bg-purple-300 w-8 h-8 rounded-full absolute inset-6"></div>
+    </div>
+  </div>
+</div>
 
-      </div>
       <SIWE onSignIn={handleIt} hidden="true" />
 
 
