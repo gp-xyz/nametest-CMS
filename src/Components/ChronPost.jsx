@@ -48,7 +48,6 @@ function ChronPost(props) {
       
       }
     </div>
-
   );
 }
 
