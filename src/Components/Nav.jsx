@@ -50,12 +50,12 @@ export default function Nav({ navSignedIn, assignTheme }) {
 
 
 
-        <ul className="menu">
+        <ul className="menu ">
 
           <li className="bg-orange-500 menuitem"><Link className="nav-link" to="/">Home</Link></li>
           <li className="bg-yellow-300 menuitem"><Link className="nav-link" to="/posts">Chronicle</Link></li>
           <li className="bg-blue-300 menuitem"><Link className="nav-link" to="/monikers">Monikers</Link></li>
-          <li className="bg-purple-300 menuitemr"><Link className="nav-link" to="/about">about</Link></li>
+          <li className="bg-purple-300 menuitemr"><Link className="nav-link" to="/about">About</Link></li>
 
 
         </ul>
@@ -64,17 +64,19 @@ export default function Nav({ navSignedIn, assignTheme }) {
 
 
       </div>
-      <div className="logo relative hidden md:inline-flex h-full">
-  <div className="flex items-center w-52 bg-slate-700 rounded-md h-full">
-    <div className="text-white font-bold text-6xl md:text-8xl mx-3">F</div>
-    <div className="relative w-20 h-20">
-      <div className="bg-orange-500 w-20 h-20 rounded-full absolute inset-0"></div>
-      <div className="bg-yellow-300 w-16 h-16 rounded-full absolute inset-2"></div>
-      <div className="bg-blue-300 w-12 h-12 rounded-full absolute inset-4"></div>
-      <div className="bg-purple-300 w-8 h-8 rounded-full absolute inset-6"></div>
+      <div className="logo relative hidden md:inline-flex h-full hover:cursor-help">
+  <div className="flex items-center justify-center w-52 bg-slate-700 rounded-md h-full">
+    <div className="relative z-10 w-48 h-48 flex items-center justify-center ">
+      <div className="bg-orange-500 w-48 h-48 rounded-full absolute inset-0 "></div>
+      <div className="bg-yellow-300 w-42 h-42 rounded-full absolute inset-3"></div>
+      <div className="bg-blue-300 w-36 h-36 rounded-full absolute inset-6"></div>
+      <div className="bg-purple-300 w-30 h-30 rounded-full absolute inset-9 "></div>
+      <div className="text-black font-bold text-6xl md:text-8xl absolute inset-0 flex items-center justify-center z-20 hover:text-white ">F</div>
     </div>
   </div>
 </div>
+
+
 
       <SIWE onSignIn={handleIt} hidden="true" />
 

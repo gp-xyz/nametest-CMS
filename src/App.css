@@ -82,3 +82,6 @@
 .blogtitle {
   font-family:  'Bowlby One', sans-serif;
 }
+.textlink{
+  @apply text-green-500 underline hover:no-underline;
+}

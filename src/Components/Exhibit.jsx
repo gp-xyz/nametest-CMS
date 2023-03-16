@@ -22,8 +22,8 @@ function Exhibit(props) {
         </div>
 
 
-        <div className="flex w-full h-auto my-4 pb-0 md:pb-24 ">
-          <img alt="art" src={"https://media.artblocks.io/" + NameEntry.token + ".png"} />
+        <div className="flex my-4 pb-0 md:pb-24 md:h-screen md:w-auto">
+          <img alt="w-full h-full" src={"https://media.artblocks.io/" + NameEntry.token + ".png"} />
         </div>
 
         <div className='bottomthird pl-2 grid grid-auto-flow-dense grid-cols-2 md:grid-cols-2'>
