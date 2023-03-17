@@ -11,7 +11,7 @@ const Home = () => {
   <span className="text-purple-500">b</span></h1>
         <p className="text-lg mb-8">Experiments in art, code and community</p>
         <div className="bg-white rounded-lg p-8 max-w-2xl w-full shadow-lg">
-          <h2 className="text-xl font-bold mb-4">Flashbulb is a platform focused on on chain generative art, namely Art Blocks.</h2>
+          <h2 className="text-xl font-bold mb-4">Flashbulb is a platform focused on Chain Art</h2>
           <div className="grid grid-cols-2 gap-4 mt-8">
             <div className="bg-gray-100 rounded-lg p-4 flex flex-col rounded shadow-2xl relative border-orange-500 border-2">
               <h3 className="text-lg font-bold mb-2">Highlight your collection</h3>

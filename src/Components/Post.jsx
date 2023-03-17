@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import ReactHtmlParser from "react-html-parser";
 
 function SinglePost() {
   const [post, setPost] = useState(null);
@@ -19,16 +20,22 @@ function SinglePost() {
       });
   }, [slug]);
 
-  if (isLoading || !post?.title?.rendered) { // Check if post.title.rendered exists
+  if (isLoading || !post?.title?.rendered) {
     return <div>Loading...</div>;
   }
 
   return (
     <div className="container mx-auto px-4 general-light">
       <h1 className="text-3xl font-bold my-4">{post.title.rendered}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.content.rendered }} />
+      <div dangerouslySetInnerHTML={{
+        __html: post.content.rendered
+          .replace(/<p>/g, '<p class="py-2 my-2">')
+          .replace(/<h3>/g, '<h3 class="text-xl my-1">')
+      }} />
     </div>
   );
+  
+  
 }
 
 export default SinglePost;
