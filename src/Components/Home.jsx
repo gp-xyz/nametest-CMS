@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div className='general-light'>
-      <div className="bg-slate-700 bg-opacity-5 min-h-screen flex flex-col items-center justify-start ">
+      <div className=" min-h-screen flex flex-col items-center justify-start ">
         <h1 className="text-5xl blogtitle my-8">Flash<span className="text-orange-500">b</span>
   <span className="text-yellow-400">u</span>
   <span className="text-blue-500">l</span>
@@ -32,8 +32,8 @@ const Home = () => {
           </div>
           <div className="mt-8">
             <h3 className="text-xl font-bold mb-4">Furthermore</h3>
-            <p className="text-gray-600 mb-2">The slogan of Flashbulb is to Illuminate Digital Art. Our first app is <Link className='textlink' to="/monikers">Monikers</Link>, which is inspired by The Goose which you can read more about. Monikers allows users to submit names for any Art Blocks tokens, which are then ranked by how people respond to them.</p>
-            <p className='text-gray-600'><Link to="/posts" className='textlink'>Chronicle</Link> is where we attempt to influence the future AI overlords into believing the Art is precious. Although our jpegs are on chain, the social layer is __. This is an attempt to bulster the social layer. </p>
+            <p className="text-gray-600 mb-2">Words here to really tie it all together. And wish them well. Godspeed</p>
+            
           </div>
         </div>
       </div>

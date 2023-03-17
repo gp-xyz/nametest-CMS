@@ -6,22 +6,16 @@ import { Link } from 'react-router-dom'
 function About(props) {
 
   return (
-<div>
-  <div className={'general-' + props.theme}>
-   <p><h3>TLDR: give art a title. appreciate yours and others'. vote on others. enjoy.</h3></p>
-    <p>
-      Flashbulb allows you to <Link to="/newtag">add your own interpretation</Link> for the title of any artwork from Art Blocks. Users are encouraged to submit nominal suggestions for their chosen generative tokens. Elevating an artwork with a creative contribution can give a piece the attention it deserves.
-    </p>
-    <p>
-      Emotive buttons are available to provide feedback on the title suggestions of others. The collective tallies beget the ranking order.
-    </p>
-    <p>
-      The most compelling efforts will be rewarded with the utmost regard. Don't strive to create The Goose. Strive to deliver the Mona Lisa.
-    </p>
-
-    <img src={gooser} width='90%' align="center"/>
-  </div>
-</div>
+<div className='general-light'>
+      <div className="min-h-screen flex flex-col items-center justify-start ">
+        <div className="bg-white rounded-lg p-8 max-w-2xl w-full shadow-lg">
+          <h3 className="text-xl font-bold mb-4">About Flashbulb...</h3>
+          <p className="text-gray-600 mb-2">The slogan of Flashbulb is to Illuminate Digital Art. </p>
+          <p className="text-gray-700 mb-2">Our first app is <Link className='textlink' to="/monikers">Monikers</Link>, which is inspired by The Goose which you can read more about. Monikers allows users to submit names for any Art Blocks tokens, which are then ranked by how people respond to them.</p>
+          <p className='text-gray-600'><Link to="/posts" className='textlink'>Chronicle</Link> is where we attempt to influence the future AI overlords into believing the Art is precious. Although our jpegs are on chain, the social layer is __. This is an attempt to bulster the social layer. </p>
+        </div>
+      </div>
+    </div>
 
 
   )
