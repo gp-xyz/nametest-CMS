@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ReactHtmlParser from "react-html-parser";
 
 function SinglePost() {
   const [post, setPost] = useState(null);
