@@ -58,7 +58,7 @@ function Router() {
           
         <Route path="/newtag" element={<NewTag  author={author} theme={myTheme}/>} />
           
-        <Route path="/about" element={<About theme={myTheme} />} />
+        <Route path="/about" element={<About />} />
 
         
           
