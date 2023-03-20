@@ -8,11 +8,12 @@
 
 /* Light theme */
 .general-light {
-
+  font-family: 'Ubuntu', sans-serif;
   border-top: 1px solid #ccc;
+  color: #000f08;
   background-color: #fdfdfd;
   min-height: 700px;
-  font-family: 'Arial', sans-serif;
+  
   @apply p-0 m-0 md:p-5 md:m-6 min-h-screen;
 }
 
@@ -31,6 +32,9 @@
   @apply bg-yellow-300 underline;
 }
 
+.fbub {
+  @apply bg-gray-100 rounded-lg p-4 flex flex-col rounded shadow-2xl relative hover:border-yellow-300 border-2;
+}
 
 .tagrank {
   
@@ -41,7 +45,7 @@
   @apply text-slate-500 text-sm hover:text-slate-400;
 }
 .namenavbutton {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   padding: 0.75rem 1.5rem;
   margin: 0.5rem;
   font-size: 1.25rem;
@@ -52,15 +56,8 @@
 }
 
 .actionbutton {
-  font-family: 'Arial', sans-serif;
-  padding: 0.75rem 1.5rem;
-  margin: 0.5rem;
-  font-size: 1.25rem;
-  background-color: #00c277;
-  color: #FFFFFF;
-  border: 2px solid #FFA500;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.2s ease-in-out;
+  
+  @apply p-4 m-3 bg-purple-400 border-lime-100 border-4;
   
 }
 
@@ -70,10 +67,7 @@
 }
 
 
-/* Add an animation that glows when hovered over */
-.actionbutton:hover {
-  box-shadow: 0px 0px 10px rgba(255, 165, 0, 0.75);
-}
+
 
 .menuitem {
   @apply border-b-slate-500 border-r-slate-500 border;
@@ -83,5 +77,6 @@
   font-family:  'Bowlby One', sans-serif;
 }
 .textlink{
-  @apply text-green-500 underline hover:no-underline;
+  
+  @apply text-yellow-600 underline hover:no-underline;
 }

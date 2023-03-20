@@ -23,8 +23,9 @@ function Project(props) {
   return (
       
    
-    <div><NameNav />
-       <MainTable data={data} author={author} sortstyle={props.style} title={projectName} authorvotes={props.authorvotes} theme={props.theme} />
+    <div>
+      
+       <MainTable data={data} author={author} sortstyle={props.style} title={"P:" + projectName} authorvotes={props.authorvotes} theme={props.theme} />
     
     </div>
   )

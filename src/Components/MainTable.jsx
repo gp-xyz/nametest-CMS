@@ -106,10 +106,10 @@ export default function MainTable(props) {
         <p>Loading..</p>
       ) : (
         <div className="text-2xl p-2">
-          <div >{props.title} - {listdata.length} things</div>
+          <div >{props.title} ({listdata.length})</div>
           <div >     
              <label>Sort by:&nbsp;
-            <select value={sortStyle} onChange={handleIt} className="bg-green-500">
+            <select value={sortStyle} onChange={handleIt} className="bg-yellow-300">
               {items.map((item) => (
                 <option key={item} value={item}>
                   {item}

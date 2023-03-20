@@ -48,7 +48,7 @@ export default function Nav({ navSignedIn, assignTheme }) {
   return (
     <div className="flex items-center justify-between bg-gray-100 py-3 px-5">
       <div className="logo flex items-center justify-center w-1/4 hover:cursor-help hidden sm:contents">
-        <div className="text-black font-bold text-6xl md:text-8xl flex items-center justify-center z-20 hover:text-white">F</div>
+        <div className="text-black font-bold text-6xl md:text-8xl flex items-center justify-center z-20 hover:text-white">💡</div>
       </div>
       <ul className="flex justify-start w-3/4">
         <li className="mr-6"><Link className="nav-link" to="/">Home</Link></li>

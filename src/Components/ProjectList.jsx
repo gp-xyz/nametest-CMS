@@ -62,7 +62,7 @@ function ProjectList(props) {
             <tbody>
               {data.map(item => (
                 <tr key={item.name} className="text-gray-700 text-sm my-1">
-                  <td><Link to={'/project/' + item.name} className="text-blue-500 hover:text-blue-700">{item.name}</Link></td>
+                  <td><Link to={'/project/' + item.name} className="textlink">{item.name}</Link></td>
                   <td>{item.count}</td>
                 </tr>
               ))}
