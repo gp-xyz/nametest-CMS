@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Exhibit from "./Exhibit";
+import NameNav from "./NameNav";
 export default function MainTable(props) {
 
   const [listdata, setListData] = useState([])
@@ -98,7 +99,7 @@ export default function MainTable(props) {
   }
   return (
     <div className={"general-" + props.theme} key="big1">
-
+      <NameNav type={props.title}/>
 
 
       {(typeof listdata === 'undefined') ? (

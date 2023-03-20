@@ -10,7 +10,7 @@
 .general-light {
 
   border-top: 1px solid #ccc;
-  background-color: #fff;
+  background-color: #fdfdfd;
   min-height: 700px;
   font-family: 'Arial', sans-serif;
   @apply p-0 m-0 md:p-5 md:m-6 min-h-screen;
@@ -24,11 +24,11 @@
 
 .nav-link {
   font-family: 'Bowlby One', sans-serif;
-  @apply  text-slate-800 block py-2 px-4 text-center text-2xl;
+  @apply  text-slate-800 block  p-2 md:py-2 md:px-4 text-center sm:text-xl;
 }
 
 .nav-link:hover {
-  @apply bg-cyan-100 text-purple-400 underline;
+  @apply bg-yellow-300 underline;
 }
 
 

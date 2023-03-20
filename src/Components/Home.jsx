@@ -5,10 +5,8 @@ const Home = () => {
   return (
     <div className='general-light'>
       <div className=" min-h-screen flex flex-col items-center justify-start ">
-        <h1 className="text-5xl blogtitle my-8">Flash<span className="text-orange-500">b</span>
-  <span className="text-yellow-400">u</span>
-  <span className="text-blue-500">l</span>
-  <span className="text-purple-500">b</span></h1>
+        <h1 className="text-5xl blogtitle my-8">Flash<span className="text-yellow-300">bulb</span>
+          </h1>
         <p className="text-lg mb-8">Experiments in art, code and community</p>
         <div className="bg-white rounded-lg p-8 max-w-2xl w-full shadow-lg">
           <h2 className="text-xl font-bold mb-4">Flashbulb is a platform focused on Chain Art</h2>
@@ -33,7 +31,7 @@ const Home = () => {
           <div className="mt-8">
             <h3 className="text-xl font-bold mb-4">Furthermore</h3>
             <p className="text-gray-600 mb-2">Words here to really tie it all together. And wish them well. Godspeed</p>
-            
+
           </div>
         </div>
       </div>

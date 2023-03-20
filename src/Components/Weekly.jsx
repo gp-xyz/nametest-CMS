@@ -22,7 +22,7 @@ function Weekly(props) {
       
    
     <div>
-      <NameNav />
+      
        <MainTable data={data} author={author} sortstyle={props.sortstyle} title="Weekly" authorvotes={props.authorvotes } theme={props.theme} />
     
     </div>

@@ -80,9 +80,10 @@ export default function NewTag(props) {
   }
   return (
     <div>
-      <NameNav />
+      
 
       <div className={'general-' + props.theme}>
+      <NameNav type="New"/>
 
 
 
