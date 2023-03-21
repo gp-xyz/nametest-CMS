@@ -5,9 +5,10 @@ function SinglePost() {
   const [post, setPost] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const { slug } = useParams();
-
+  const wpurl = 'http://35.164.177.180/'
+  const oldwpurl = 'https://johpat90.dreamhosters.com/'
   useEffect(() => {
-    fetch(`https://johpat90.dreamhosters.com/wp-json/wp/v2/posts?slug=${slug}&_embed`)
+    fetch(wpurl + `wp-json/wp/v2/posts?slug=${slug}&_embed`)
       .then(response => response.json())
       .then(data => {
         setPost(data[0]);

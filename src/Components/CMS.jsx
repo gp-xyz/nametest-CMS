@@ -6,12 +6,14 @@ function CMS() {
   const [authors, setAuthors] = useState({});
   const [media , setMedia] = useState({});
   const [isLoading, setIsLoading] = useState(true); // new state to track loading status
+  const wpurl = 'http://35.164.177.180/'
+  const oldwpurl = 'https://johpat90.dreamhosters.com/'
 
   useEffect(() => {
     Promise.all([
-      fetch("https://johpat90.dreamhosters.com/wp-json/wp/v2/posts?_embed"),
-      fetch("https://johpat90.dreamhosters.com/wp-json/wp/v2/media"),
-      fetch("https://johpat90.dreamhosters.com/wp-json/wp/v2/users")
+      fetch(wpurl + "wp-json/wp/v2/posts?_embed"),
+      fetch(wpurl + "wp-json/wp/v2/media"),
+      fetch(wpurl + "wp-json/wp/v2/users")
     ])
     .then(([postResponse, mediaResponse, authorResponse]) => {
       return Promise.all([
