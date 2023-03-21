@@ -5,7 +5,7 @@ function SinglePost() {
   const [post, setPost] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const { slug } = useParams();
-  const wpurl = 'http://35.164.177.180/'
+  const wpurl = 'https://44.237.162.198/'
   const oldwpurl = 'https://johpat90.dreamhosters.com/'
   useEffect(() => {
     fetch(wpurl + `wp-json/wp/v2/posts?slug=${slug}&_embed`)

@@ -6,7 +6,7 @@ function CMS() {
   const [authors, setAuthors] = useState({});
   const [media , setMedia] = useState({});
   const [isLoading, setIsLoading] = useState(true); // new state to track loading status
-  const wpurl = 'http://35.164.177.180/'
+  const wpurl = 'https://44.237.162.198/'
   const oldwpurl = 'https://johpat90.dreamhosters.com/'
 
   useEffect(() => {
