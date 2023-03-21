@@ -45,14 +45,14 @@ function ProjectList(props) {
   }
 
   return (
-    <div className="general-light">
+    <div className="general-light ">
       <NameNav type="Project"/>
-      <div className="bg-white rounded-md p-4 my-4 mx-2">
+      <div className="bg-white rounded-md p-4 my-4 mx-2 ">
         <h1 className="text-lg font-medium mb-2">Projects (n={data.length})</h1>
         {(data.length === 0) ? (
           <p>Loading..</p>
         ) : (
-          <table className="table-auto w-full">
+          <table className="table-auto ">
             <thead>
               <tr>
                 <th className="text-left cursor-pointer" onClick={() => handleSort("name")}>Project Name</th>

@@ -15,21 +15,21 @@ function Exhibit(props) {
   return (
     listdata.map((NameEntry, id) => (
       // const imglink = 
-      <div className='grid-auto-flow-dense max-w-5xl grid-rows-3 py-10 px-1' key={NameEntry.id + 'div'}>
-        <div className='flex flex-row items-center'>
+      <div className='grid-auto-flow-dense max-w-5xl grid-rows-3 py-10 px-1 pb-12 my-1 ' key={NameEntry.id + 'div'}>
+        <div className='flex flex-row items-center '>
           <span className='tagrank text-6xl text-slate-600'> {(id + 1)} </span>
           <span className='text-4xl p-2 m-1'> {NameEntry.name} </span>
         </div>
 
-        <div className="flex my-4 pb-0 md:pb-24 ">
+        <div className="flex my-4 pb-1 md:pb-12 ">
           <img
-            alt="w-auto h-full object-none object-contain"
+            alt="w-full object-none object-contain"
             src={"https://media.artblocks.io/" + NameEntry.token + ".png"}
           />
         </div>
 
 
-        <div className='bottomthird pl-2 grid grid-auto-flow-dense grid-cols-2 md:grid-cols-2'>
+        <div className='bottomthird pl-2 grid grid-auto-flow-dense grid-cols-2 md:grid-cols-2 '>
           <div className=''>
             <Link className='underline hover:cursor-pointer hover:text-red-400' to={'/project/' + NameEntry.project}>[{NameEntry.project}]</Link> #{NameEntry.number}
             <br />

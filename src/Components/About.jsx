@@ -1,18 +1,34 @@
 import React from 'react'
 import gooser from '/img/goosememe.png'
-import confused from '/img/confused.png'
+import photo from '/img/flashe.png'
 import { Link } from 'react-router-dom'
 
 function About(props) {
+  const bulletstyle = "mb-2 bg-yellow-300 text-slate-700"
 
   return (
 <div className='general-light'>
       <div className="min-h-screen flex flex-col items-center justify-start ">
         <div className="bg-white rounded-lg p-8 max-w-2xl w-full shadow-lg">
-          <h3 className="text-xl font-bold mb-4">About Flashbulb...</h3>
-          <p className="text-gray-600 mb-2">The slogan of Flashbulb is to Illuminate Digital Art. </p>
-          <p className="text-gray-700 mb-2">Our first app is <Link className='textlink' to="/monikers">Monikers</Link>, which is inspired by The Goose which you can read more about. Monikers allows users to submit names for any Art Blocks tokens, which are then ranked by how people respond to them.</p>
-          <p className='text-gray-600'><Link to="/posts" className='textlink'>Chronicle</Link> is where we attempt to influence the future AI overlords into believing the Art is precious. Although our jpegs are on chain, the social layer is __. This is an attempt to bulster the social layer. </p>
+          <h3 className="text-xl font-bold mb-4">We believe in illuminating digital art</h3>
+          
+          <div>
+          <p className="text-gray-600 mb-2">Flashbulb aims are threefold: </p>
+          <div class="px-2 m-2">
+  <ul className="list-disc list-inside  pb-3">
+    <li className={bulletstyle}>Empower community with engaging tools</li>
+    <li className={bulletstyle}>Document the onchain generative art movement</li>
+    <li className={bulletstyle}>Spread love and inspire joy with art and code</li>
+  </ul>
+</div>
+
+          </div>
+          <p className="text-gray-600 mb-2">Flashbulb's first app is <Link className='textlink' to="/monikers">Monikers</Link>, which is takes tremendous inspiration from The Goose which you can read more about. Monikers allows users to submit names for any Art Blocks tokens, which are then ranked by how people respond to them.</p>
+          <p className='text-gray-600 mb-2'>
+            <Link to="/posts" className='textlink'>Chronicle</Link> is where we  attempt to fill in
+             some of the gap between onchain ledger and the social layer. In such mercurial environment, documenting the culture can reinforce the social layer by preserving the narratives around onchain behavior. With time we hope to broaden the scope of the discourse around digital artwork to include more rigorous criticism and artistic interpration.</p>
+            <p className='text-gray-600 mb-5'>Our core belief is that the chain art movement is simultaneously quite important and quite immature, and we will be here shining a light.</p>
+          <p><img className='p-1 m-1' src={photo} /></p>
         </div>
       </div>
     </div>
