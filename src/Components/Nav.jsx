@@ -46,7 +46,7 @@ export default function Nav({ navSignedIn, assignTheme }) {
   }
 
   return (
-    <div className="flex flex-row  max-w-6xl items-center justify-between bg-gray-100 py-3 px-2  w-full">
+    <div className="flex flex-row  max-w-6xl items-center justify-between bg-skin-menu py-3 px-2  w-full">
       <div className="logo flex items-center justify-center w-1/4 hover:cursor-help hidden sm:contents">
         <div className="text-black font-bold text-6xl md:text-8xl flex items-center justify-center z-20 w-16">
           <img src={logo}  />

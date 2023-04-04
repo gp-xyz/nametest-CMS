@@ -40,7 +40,7 @@ export default function VoteButton(props) {
 
   return (
     
-      <button className="p-1 shadow bg-transparent theborder w-32 hover:opacity-80 border-2  border-t-0 border-l-0 m-1 hover:rotate-3">
+      <button className="p-1 shadow bg-transparent border-skin-comp w-32 hover:opacity-80 border-2  border-t-0 border-l-0 m-1 hover:rotate-3">
         <img className="w-full" alt="none" width="auto" src={imgSource} onClick={toggleMe}/>
 
       </button>
