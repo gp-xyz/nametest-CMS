@@ -9,9 +9,12 @@ import bulbs from "/img/bulbs.png";
 
 
 const Home = () => {
-  const bubstyle1 = "border-color-slate-500 border-0 pl-2 my-2"
-  const subhead = "text-xl text-skin-comp"
-  const subtxt = "text-l text-skin-base pl-1"
+  const fullcardstyle = "flex py-2 md:py-5 my-3 flex-row"
+  const bubstyle1 = "border-color-slate-500 px-1 md:px-2 m-3"
+  const imgstyle = "rounded-xl sm:w-48 md:w-60"
+  const imgdiv = "mt-3"
+  const subhead = "text-2xl text-skin-comp"
+  const subtxt = "text-xl text-skin-base pl-1/2"
   return (
     <div className='general-light max-w-4xl'>
       <div className=" min-h-screen flex flex-col items-center justify-start ">
@@ -23,40 +26,44 @@ const Home = () => {
 
           <div>
             <div className='flex flex-row'>
-              <div className='text-3xl pr-3'>
+            <img className='rounded-xl w-48 md:w-60' src={statue} />
+              <div className='text-3xl pl-3'>
                 <span className="text-skin-comp font-extrabold">Monikers</span> is an unofficial directory of names for generative art tokens.
               </div>
-              <img className='rounded-xl w-48 md:w-60' src={statue} />
+              
             </div>
 
 
-            <div className='text-xl pt-2'>With Monikers, you can:</div>
-            <div>
+            
+            <div className='pt-8 md:pt-20'>
 
-              <div className='flex'>
-              <div className={bubstyle1}>
-                <div className={subhead}>Show off your creativity</div>
-                <div className={subtxt}><div>Contribute a name for an Art Blocks token to leave your own mark of creativity, thoughtfulness, inspiration or otherwise.</div></div>
+              <div className={fullcardstyle}>
+                <div className={bubstyle1}>
+                  <div className={subhead}>Show off your creativity</div>
+                  <div className={subtxt}><div>Contribute a name for an Art Blocks token to leave your own mark of creativity, thoughtfulness, inspiration or otherwise.</div></div>
+                </div>
+                <div className={imgdiv}><img className={imgstyle} src={polaroid} /></div>
               </div>
-              <div><img className='rounded-xl  w-48 md:w-60' src={polaroid} /></div>
-</div>
-              <div className='flex'>
-              <div><img className='rounded-xl  w-48 md:w-60' src={ladyframe} /></div>
-              <div className={bubstyle1}>
-                <div className={subhead}>Connect with art</div>
-                <div className={subtxt}><div>Discoverthe monikers of other art enthusiasts and collectors through our community-driven platform.</div></div>
+
+              <div className={fullcardstyle}>
+                
+                <div className={bubstyle1}>
+                  <div className={subhead}>Connect with art</div>
+                  <div className={subtxt}><div>Discover the monikers of other art enthusiasts and collectors through our community-driven platform.</div></div>
+                </div>
+
+                <div className={imgdiv}><img className={imgstyle} src={ladyframe} /></div>
+
               </div>
-              
+
+              <div className={fullcardstyle}>
+                <div className={bubstyle1}>
+                  <div className={subhead}>Express yourself &rarr; Impact community</div>
+                  <div className={subtxt}>Use emotive buttons to give feedback on the contributions of others. Browse rankings based on these votes.</div>
+                </div>
+                <div className={imgdiv}><img className={imgstyle} src={balloons} /></div>
               </div>
-              
-              <div className='flex'>
-              <div className={bubstyle1}>
-                <div className={subhead}>Express yourself &rarr; Impact community</div>
-                <div className={subtxt}>Use emotive buttons to give feedback on the contributions of others. Browse rankings based on these votes.</div>
-              </div>
-              <div><img className='rounded-xl  w-48 md:w-60' src={balloons} /></div>
-              </div>
-          
+
 
               <Link to="/monikers">
                 <div className='actionbutton p-0 text-center'>

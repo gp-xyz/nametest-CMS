@@ -16,6 +16,7 @@ import CMS from './CMS'
 import NameNav from './NameNav';
 import Post from './Post';
 import Home from './Home';
+import Test from './Test';
 function Router() {
   const [author,setAuthor] = useState(null)
   const [authorVotes,setAuthorVotes] = useState({})
@@ -59,6 +60,7 @@ function Router() {
         <Route path="/newtag" element={<NewTag  author={author} theme={myTheme}/>} />
           
         <Route path="/about" element={<About />} />
+        <Route path="/test" element={<Test />} />
 
         
           

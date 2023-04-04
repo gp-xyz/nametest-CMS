@@ -57,6 +57,7 @@ export default function Nav({ navSignedIn, assignTheme }) {
         <li className="mr-6"><Link className="nav-link" to="/posts">Chronicle</Link></li>
         <li className="mr-6"><Link className="nav-link" to="/monikers">Monikers</Link></li>
         <li className="mr-6"><Link className="nav-link" to="/about">About</Link></li>
+        <li className="mr-6"><Link className="nav-link" to="/test">test</Link></li>
       </ul>
       <SIWE onSignIn={handleIt} hidden="true" />
     </div>
