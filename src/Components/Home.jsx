@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import woodframe from "/img/woodframe.png";
+
+import statue from "/img/statue.png";
+import polaroid from "/img/polaroid1.png";
+import ladyframe from "/img/ladyframe.png";
+import balloons from "/img/balloons.png";
 import bulbs from "/img/bulbs.png";
 
 
@@ -22,26 +26,37 @@ const Home = () => {
               <div className='text-3xl pr-3'>
                 <span className="text-skin-comp font-extrabold">Monikers</span> is an unofficial directory of names for generative art tokens.
               </div>
-              <img className='rounded-xl w-48 md:w-60' src={woodframe} />
+              <img className='rounded-xl w-48 md:w-60' src={statue} />
             </div>
 
 
             <div className='text-xl pt-2'>With Monikers, you can:</div>
             <div>
 
-
+              <div className='flex'>
               <div className={bubstyle1}>
                 <div className={subhead}>Show off your creativity</div>
                 <div className={subtxt}><div>Contribute a name for an Art Blocks token to leave your own mark of creativity, thoughtfulness, inspiration or otherwise.</div></div>
               </div>
+              <div><img className='rounded-xl  w-48 md:w-60' src={polaroid} /></div>
+</div>
+              <div className='flex'>
+              <div><img className='rounded-xl  w-48 md:w-60' src={ladyframe} /></div>
               <div className={bubstyle1}>
                 <div className={subhead}>Connect with art</div>
                 <div className={subtxt}><div>Discoverthe monikers of other art enthusiasts and collectors through our community-driven platform.</div></div>
               </div>
+              
+              </div>
+              
+              <div className='flex'>
               <div className={bubstyle1}>
                 <div className={subhead}>Express yourself &rarr; Impact community</div>
                 <div className={subtxt}>Use emotive buttons to give feedback on the contributions of others. Browse rankings based on these votes.</div>
               </div>
+              <div><img className='rounded-xl  w-48 md:w-60' src={balloons} /></div>
+              </div>
+          
 
               <Link to="/monikers">
                 <div className='actionbutton p-0 text-center'>
