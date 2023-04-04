@@ -1,39 +1,61 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import woodframe from "/img/woodframe.png";
+import bulbs from "/img/bulbs.png";
+
 
 const Home = () => {
+  const bubstyle1 = "border-color-slate-500 border-0 pl-2 my-2"
+  const subhead = "text-xl thecolor"
+  const subtxt = "text-l text-gray-700 pl-1"
   return (
-    <div className='general-light'>
+    <div className='general-light max-w-4xl'>
       <div className=" min-h-screen flex flex-col items-center justify-start ">
-        <h1 className="text-5xl blogtitle my-8">Flash<span className="text-yellow-300">bulb</span>
-          </h1>
-        <p className="text-lg mb-8">Experiments in art, code and community</p>
-        <div className="bg-white rounded-lg p-8 max-w-2xl w-full shadow-lg">
-          <h2 className="text-xl font-bold mb-4">Flashbulb is a platform focused on Chain Art</h2>
-          <div className="grid grid-cols-2 gap-4 mt-8">
-            <div className="fbub">
-              <h3 className="text-lg font-bold mb-2">Highlight your collection</h3>
-              <p className="text-gray-600">Showcase your favorite Art Blocks with <Link className='textlink' to="/monikers">Monikers</Link>, an unofficial directory of names for generative art tokens.</p>
-            </div>
-            <div className="fbub">
-              <h3 className="text-lg font-bold mb-2">Show off your creativity</h3>
-              <p className="text-gray-600"><Link to='/newtag' className='textlink'>Contribute a name</Link> for an Art Blocks token to leave your own mark of creativity, thoughtfulness, inspiration or otherwise.</p>
-            </div>
-            <div className="fbub">
-              <h3 className="text-lg font-bold mb-2">Connect with art</h3>
-              <p className="text-gray-600"><Link to='/weekly' className='textlink'>Discover</Link> the monikers of other art enthusiasts and collectors through our community-driven platform. </p>
-            </div>
-            <div className="fbub">
-              <h3 className="text-lg font-bold mb-2">Express yourself &rarr; Impact community</h3>
-              <p className="text-gray-600">Use emotive buttons to give feedback on the contributions of others. Browse rankings based on these votes.</p>
-            </div>
-          </div>
-          <div className="mt-8">
-            <h3 className="text-xl font-bold mb-4">Furthermore</h3>
-            <p className="text-gray-600 mb-2">Words here to really tie it all together. And wish them well. Godspeed</p>
-
-          </div>
+        <div className="text-5xl sm:text-7xl blogtitle my-8">Flash<span className="thecolor">bulb</span>
         </div>
+        <p className="pl-1 text-xl sm:text-4xl mb-3 sm:mb-5 md:mb-8 ">Original experiments in art, code and community</p>
+        <div className="bg-white rounded-lg p-8 max-w-4xl w-full ">
+
+
+          <div>
+          <div className='flex flex-row items-center'>
+  <div className='text-3xl self-center'>
+    <span className="thecolor font-extrabold">Monikers</span> is an unofficial directory of names for generative art tokens.
+  </div>
+  <img className='rounded-xl w-48 md: w-60' src={woodframe} />
+</div>
+
+
+            <div className='text-xl pt-2'>With Monikers, you can:</div>
+            <div>
+
+
+              <div className={bubstyle1}>
+                <div className={subhead}>Show off your creativity</div>
+                <div className={subtxt}><div>Contribute a name for an Art Blocks token to leave your own mark of creativity, thoughtfulness, inspiration or otherwise.</div></div>
+              </div>
+              <div className={bubstyle1}>
+                <div className={subhead}>Connect with art</div>
+                <div className={subtxt}><div>Discoverthe monikers of other art enthusiasts and collectors through our community-driven platform.</div></div>
+              </div>
+              <div className={bubstyle1}>
+                <div className={subhead}>Express yourself &rarr; Impact community</div>
+                <div className={subtxt}>Use emotive buttons to give feedback on the contributions of others. Browse rankings based on these votes.</div>
+              </div>
+
+              <Link to="/monikers">
+                <div className='actionbutton p-0 text-center'>
+                  <span className='text-white text-3xl'>EXPLORE MONIKERS</span>
+                </div>
+              </Link>
+
+            </div>
+          </div>
+
+          <img className='mt-5' src={bulbs} />
+
+        </div>
+
       </div>
     </div>
   );

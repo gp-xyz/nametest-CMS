@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SIWE from "./SIWE";
 import Theme from "./Theme"
-import logo from "/img/fb-dk-100px.png";
+import logo from "/img/sticker.png";
 import { getCTA } from './util/RandomCTA'
 import "../App.css"
 
@@ -46,11 +46,13 @@ export default function Nav({ navSignedIn, assignTheme }) {
   }
 
   return (
-    <div className="flex items-center justify-between bg-gray-100 py-3 px-5">
+    <div className="flex flex-row  max-w-6xl items-center justify-between bg-gray-100 py-3 px-2  w-full">
       <div className="logo flex items-center justify-center w-1/4 hover:cursor-help hidden sm:contents">
-        <div className="text-black font-bold text-6xl md:text-8xl flex items-center justify-center z-20 hover:text-white">💡</div>
+        <div className="text-black font-bold text-6xl md:text-8xl flex items-center justify-center z-20 w-16">
+          <img src={logo}  />
+        </div>
       </div>
-      <ul className="flex justify-start w-3/4">
+      <ul className="flex flex-row justify-start w-full md:w-3/4 ">
         <li className="mr-6"><Link className="nav-link" to="/">Home</Link></li>
         <li className="mr-6"><Link className="nav-link" to="/posts">Chronicle</Link></li>
         <li className="mr-6"><Link className="nav-link" to="/monikers">Monikers</Link></li>
