@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Loading from "./Loading";
 
 function SinglePost() {
   const [post, setPost] = useState(null);
@@ -24,7 +25,7 @@ function SinglePost() {
   }, [slug]);
 
   if (isLoading || !post?.title?.rendered) {
-    return <div>1 Loading...</div>;
+    return <Loading />;
   }
 
   return (

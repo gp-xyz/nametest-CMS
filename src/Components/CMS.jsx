@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ChronPost from "./ChronPost";
+import Loading from "./Loading";
 
 function CMS() {
   const [posts, setPosts] = useState([]);
@@ -52,7 +53,7 @@ function CMS() {
   }, []);
 
   if (isLoading) { // check if data is still loading
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
   return (

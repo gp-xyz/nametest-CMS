@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Exhibit from "./Exhibit";
 import NameNav from "./NameNav";
+import Loading from "./Loading";
 export default function MainTable(props) {
 
   const [listdata, setListData] = useState([])
@@ -103,7 +104,7 @@ export default function MainTable(props) {
 
 
       {(typeof listdata === 'undefined') ? (
-        <p>Loading..</p>
+        <Loading />
       ) : (
         <div className="text-2xl p-2">
           <div >{props.title} ({listdata.length})</div>

@@ -11,6 +11,7 @@ export default function NewTag(props) {
   const [imgURL, setImgURL] = useState(placeholder)
   const [myName, setMyName] = useState("")
   const [tokex, setTokex] = useState(null)
+  const [newID, setNewID] = useState(null)
   const handleImgError = () => {
     setImgURL(placeholder);
   };
@@ -56,18 +57,23 @@ export default function NewTag(props) {
   }
 
   let submitObj = () => {
-    let outobj = { 'project': selection.sel.label, 'number': token, 'token': selection.sel.value * (10 ** 6) + token, "name": myName, 'author': props.author, type: '1' }
-    console.log(selection.sel)
-    console.log(outobj)
-    fetch(`https://disco.pythonanywhere.com/newtag`,
-      {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(outobj)
-      })
-    
-    // navigate('/')
+    let outobj = { 'project': selection.sel.label, 'number': token, 'token': selection.sel.value * (10 ** 6) + token, "name": myName, 'author': props.author, type: '1' };
+    console.log(selection.sel);
+    console.log(outobj);
+    fetch(`https://disco.pythonanywhere.com/newtag`, {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(outobj)
+    })
+    .then(response => response.json())
+    .then(data => {
+      setNewID(data['id'])
+      console.log(newID); // do something with the new ID
+      // navigate('/')
+    })
+    .catch(error => console.error(error));
   }
+  
   let randomizeSel = () => {
     let randtoken = Math.floor(Math.random() * maxToken)
     let randproj = Math.floor(Math.random() * data.length)
@@ -124,7 +130,7 @@ export default function NewTag(props) {
               </div>
 
               <div className="w-full">
-                <Link to={{ pathname: '/newest', key: new Date().getTime() }}>
+                <Link to={{ pathname: '/newest', key: new Date().getTime(), hash: '#' + newID }}>
                   <button className="actionbutton w-full" onClick={submitObj} disabled={myName.length === 0}>Submit</button>
                 </Link>
               </div>

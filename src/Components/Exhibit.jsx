@@ -15,7 +15,7 @@ function Exhibit(props) {
   return (
     listdata.map((NameEntry, id) => (
       // const imglink = 
-      <div className='grid-auto-flow-dense max-w-5xl grid-rows-3 py-10 px-1 pb-12 my-1 ' key={NameEntry.id + 'div'}>
+      <div className='grid-auto-flow-dense max-w-5xl grid-rows-3 py-10 px-1 pb-12 my-1 ' id={NameEntry.id}>
         <div className='flex flex-row items-center '>
           <span className='tagrank text-6xl text-slate-600'> {(id + 1)} </span>
           <span className='text-4xl p-2 m-1'> {NameEntry.name} </span>
@@ -33,8 +33,8 @@ function Exhibit(props) {
           <div className=''>
             <Link className='underline hover:cursor-pointer hover:text-red-400' to={'/project/' + NameEntry.project}>[{NameEntry.project}]</Link> #{NameEntry.number}
             <br />
-            <p className="artblockstext"><a href={"https://generator.artblocks.io/" + NameEntry.token} target="_blank">watch on artblocks &rarr;</a>  </p>
-            <p className="artblockstext"><a href={"https://www.artblocks.io/token/" + NameEntry.token} target="_blank">visit page on artblocks &rarr;</a>  </p>
+            <p className="artblockstext"><a href={"https://generator.artblocks.io/" + NameEntry.token} target="_blank">Art Blocks generator &rarr;</a>  </p>
+            <p className="artblockstext"><a href={"https://www.artblocks.io/token/" + NameEntry.token} target="_blank">visit token on Art Blocks &rarr;</a>  </p>
           </div>
 
           <div className="pr-5 pb-0">
