@@ -46,20 +46,25 @@ export default function Nav({ navSignedIn, assignTheme }) {
   }
 
   return (
-    <div className="flex flex-row  max-w-6xl items-center justify-between bg-skin-menu py-3 px-2  w-full">
-      <div className="logo flex items-center justify-center w-1/4 hover:cursor-help hidden sm:contents">
-        <div className="text-black font-bold text-6xl md:text-8xl flex items-center justify-center z-20 w-16">
-          <img src={logo}  />
+    <div className="w-full">
+      <div className="flex flex-col items-center ">
+        <div className="text-5xl sm:text-7xl blogtitle mt-3 sm:mt-8 mb-3 sm:mb-4">Flash<span className="text-skin-comp">bulb</span>
         </div>
+        <p className="pb-2 sm:pb-5">Original experiments in art, community and code</p>
+
       </div>
-      <ul className="flex flex-row justify-start w-full md:w-3/4 ">
-        <li className="mr-6"><Link className="nav-link" to="/">Home</Link></li>
-        <li className="mr-6"><Link className="nav-link" to="/posts">Chronicle</Link></li>
-        <li className="mr-6"><Link className="nav-link" to="/monikers">Monikers</Link></li>
-        <li className="mr-6"><Link className="nav-link" to="/about">About</Link></li>
-        <li className="mr-6"><Link className="nav-link" to="/test">test</Link></li>
-      </ul>
-      <SIWE onSignIn={handleIt} hidden="true" />
+
+      <div className="flex flex-row items-center bg-skin-menu py-3 px-2">
+
+        <ul className="flex flex-row justify-center w-full">
+          <li className="mr-6"><Link className="nav-link" to="/">Home</Link></li>
+          <li className="mr-6"><Link className="nav-link" to="/posts">Chronicle</Link></li>
+          <li className="mr-6"><Link className="nav-link" to="/monikers">Monikers</Link></li>
+          <li className="mr-6"><Link className="nav-link" to="/about">About</Link></li>
+        </ul>
+        <SIWE onSignIn={handleIt} hidden="true" />
+      </div>
+
     </div>
   );
 }

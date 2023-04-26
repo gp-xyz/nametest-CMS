@@ -27,6 +27,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Bowlby One', 'sans-serif'],
+      serif: ['Noto Serif JP', 'serif'],
     }
   },
   plugins: [   

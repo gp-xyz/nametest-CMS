@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 import NameNav from "./NameNav";
+import Loading from "./Loading";
 
 function ProjectList(props) {
   const [data, setData] = useState([]);
@@ -50,7 +51,7 @@ function ProjectList(props) {
       <div className="bg-white rounded-md p-4 my-4 mx-2 ">
         <h1 className="text-lg font-medium mb-2">Projects (n={data.length})</h1>
         {(data.length === 0) ? (
-          <p>Loading..</p>
+          <Loading />
         ) : (
           <table className="table-auto ">
             <thead>

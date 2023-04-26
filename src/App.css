@@ -17,7 +17,9 @@
 
 body {
   background-color: var(--bg);
-  color: var(--textcolor)
+  color: var(--textcolor);
+  width: 100%;
+
 
 }
 
@@ -26,15 +28,12 @@ body {
 }
 }
 .general-light {
-
-  font-family: 'EB Garamond', serif;
-  border-top: 1px solid #ccc;
-  
- 
+  font-family: 'Noto Serif JP', serif;
   min-height: 700px;
-  
-  @apply p-0 m-0 md:p-5 md:m-6 min-h-screen;
+  @apply p-0 m-0 md:p-1 md:m-1 min-h-screen grid items-center justify-center w-full;
 }
+
+
 
 .thecolor{
   color:var(--mycolor);

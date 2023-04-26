@@ -7,7 +7,7 @@ function NameNav(props) {
   const button_default = "actionbutton m-3";
 
   return (
-    <div className="flex md:items-center justify-between bg-skin-menu p-1 md:py-2 md:px-3 max-w-5xl ">
+    <div className="flex md:items-center justify-center bg-skin-menu p-1 md:py-2 md:px-3 max-w-5xl ">
       <div className="flex md:justify-center w-full ">
       
         <Link to="/monikers" className={props.type === "All" ? selectedClass : linkClass}>All Titles</Link>
