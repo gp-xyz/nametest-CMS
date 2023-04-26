@@ -50,7 +50,7 @@ export default function Nav({ navSignedIn, assignTheme }) {
       <div className="flex flex-col items-center ">
         <div className="text-5xl sm:text-7xl blogtitle mt-3 sm:mt-8 mb-3 sm:mb-4">Flash<span className="text-skin-comp">bulb</span>
         </div>
-        <p className="pb-2 sm:pb-5">Original experiments in art, community and code</p>
+        <p className="pb-2 sm:pb-5 font-serif">Original experiments in art, community and code</p>
 
       </div>
 
