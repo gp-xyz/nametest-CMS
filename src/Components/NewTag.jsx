@@ -28,7 +28,7 @@ export default function NewTag(props) {
   }, [])
 
   let handleProjectSelect = (sel) => {
-    const value = Math.max(0, Math.min(Number(sel.found)-2, token));
+    const value = Math.max(0, Math.min(Number(sel.found) - 2, token));
     setToken(value);
 
     console.log(sel)
@@ -65,15 +65,15 @@ export default function NewTag(props) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(outobj)
     })
-    .then(response => response.json())
-    .then(data => {
-      setNewID(data['id'])
-      console.log(newID); // do something with the new ID
-      // navigate('/')
-    })
-    .catch(error => console.error(error));
+      .then(response => response.json())
+      .then(data => {
+        setNewID(data['id'])
+        console.log(newID); // do something with the new ID
+        // navigate('/')
+      })
+      .catch(error => console.error(error));
   }
-  
+
   let randomizeSel = () => {
     let randtoken = Math.floor(Math.random() * maxToken)
     let randproj = Math.floor(Math.random() * data.length)
@@ -85,29 +85,36 @@ export default function NewTag(props) {
     // return 0
   }
   return (
-    <div>
-      
+    <div className=''>
+
 
       <div className={'general-' + props.theme}>
-      <NameNav type="New"/>
+        <NameNav type="New" />
 
 
 
         {(typeof data === 'undefined') ? (
           <p>Loading..</p>
         ) : (
-          <div>
+          <div className='max-w-5xl'>
+
+            <div className='instructions py-10 container items-center'>
+              <div className='bullet'>• Select an Art Blocks Project from the dropdown list</div>
+              <div className='bullet'>• Specify a Token number, or browse through the numbers</div>
+              <div className='bullet'>• Enter your suggested moniker in the provided input field.</div>
+              <div className='bullet'>• Click on the Submit button after filling all the details.</div>
+            </div>
             <h3 className='text-2xl'>Add Artwork</h3>
 
 
             <div className='w-full'>
-              <div className='bg-orange-100 flex flex-col md:flex-row '>
+              <div className='bg-skin-comp flex flex-col md:flex-row '>
                 <div className='flex flex-col p-1 w-full'>
                   <label>AB Project</label>
                   <Select options={data} onChange={handleProjectSelect} placeholder="Select project..." />
                 </div>
                 <div className='flex flex-col p-1 w-full md:w-1/3'>
-                  <label>Token #(0-{selection.sel.found-1})</label>
+                  <label>Token #(0-{selection.sel.found - 1})</label>
 
                   <input type="number" value={token} onChange={handleTokenSelect} className='text-xl p-1 m-0 border-xl border-slate-200 ' />
                 </div>
@@ -122,21 +129,21 @@ export default function NewTag(props) {
 
               </div>
 
-            <div className='grid grid-cols-3 md:grid-cols-4'>
-              <div className='py-1 h-auto col-span-2 md:col-span-3'>
-                <img alt="select art" width="auto" height="auto" src={imgURL} onError={handleImgError}/>
+              <div className='grid grid-cols-3'>
+                <div className='py-1 h-auto col-span-3'>
+                  <img alt="select art" width="auto" height="auto" src={imgURL} onError={handleImgError} />
 
-                <p className='artblockstext'><a href={"https://generator.artblocks.io/" + tokex} target="_blank">watch on artblocks &rarr;</a>  </p>
-              </div>
+                  <p className='artblockstext'><a href={"https://generator.artblocks.io/" + tokex} target="_blank">watch on artblocks &rarr;</a>  </p>
+                </div>
 
-              <div className="w-full">
-                <Link to={{ pathname: '/newest', key: new Date().getTime(), hash: '#' + newID }}>
-                  <button className="actionbutton w-full" onClick={submitObj} disabled={myName.length === 0}>Submit</button>
-                </Link>
-              </div>
+                
 
 
-            </div></div></div>
+              </div><div className="w-full">
+                  <Link to={{ pathname: '/token/' + tokex, key: new Date().getTime(), hash: '#' + newID }}>
+                    <button className="actionbutton w-full" onClick={submitObj} disabled={myName.length === 0}>Submit</button>
+                  </Link>
+                </div></div></div>
 
         )
         }

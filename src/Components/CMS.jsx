@@ -58,7 +58,7 @@ function CMS() {
 
   return (
     <div className='general-light'>
-      <div className="text-5xl mx-2 px-2">2023</div>
+      <div className="text-5xl mx-2 px-2 py-5">2023</div>
       <div className="grid text-xl grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {posts.map(post => (
           <ChronPost post={post} />

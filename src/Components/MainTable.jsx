@@ -100,35 +100,46 @@ export default function MainTable(props) {
   }
   return (
     <div className={"general-" + props.theme} key="big1">
-      <NameNav type={props.title}/>
-
-
-      {(typeof listdata === 'undefined') ? (
+      <NameNav type={props.title} />
+  
+      {typeof listdata === 'undefined' ? (
         <Loading />
+      ) : listdata.length === 0 ? (
+        <div className="text-2xl p-2">
+          <div>{props.title} (0)</div>
+          <div>     
+            <label>Sort by:&nbsp;
+              <select value={sortStyle} onChange={handleIt} className="bg-skin-comp">
+                {items.map((item) => (
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <div className="py-10">Here we are. The beginning of something. Refresh or go to work.</div>
+        </div>
       ) : (
         <div className="text-2xl p-2">
-          <div >{props.title} ({listdata.length})</div>
-          <div >     
-             <label>Sort by:&nbsp;
-            <select value={sortStyle} onChange={handleIt} className="bg-skin-comp">
-              {items.map((item) => (
-                <option key={item} value={item}>
-                  {item}
-                </option>
-              ))}
-            </select>
-          </label></div>
-
-
-
+          <div>{props.title} ({listdata.length})</div>
+          <div>     
+            <label>Sort by:&nbsp;
+              <select value={sortStyle} onChange={handleIt} className="bg-skin-comp">
+                {items.map((item) => (
+                  <option key={item} value={item}>
+                    {item}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
           <Exhibit listdata={listdata} author={props.author} authorvotes={props.authorvotes} theme={props.theme} />
-
         </div>
       )}
-
-
     </div>
-  )
+  );
+  
 
 }
 

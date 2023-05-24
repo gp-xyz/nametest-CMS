@@ -5,8 +5,8 @@ import Loading from "./Loading";
 
 function ProjectList(props) {
   const [data, setData] = useState([]);
-  const [sortColumn, setSortColumn] = useState("");
-  const [sortOrder, setSortOrder] = useState("asc");
+  const [sortColumn, setSortColumn] = useState("count");
+  const [sortOrder, setSortOrder] = useState("desc");
 
   useEffect(() => {
     fetch("https://disco.pythonanywhere.com/rankings").then(

@@ -31,8 +31,10 @@ function Exhibit(props) {
 
         <div className='bottomthird pl-2 grid grid-auto-flow-dense grid-cols-2 md:grid-cols-2 '>
           <div className=''>
-            <Link className='underline hover:cursor-pointer hover:text-red-400' to={'/project/' + NameEntry.project}>[{NameEntry.project}]</Link> #{NameEntry.number}
-            <br />
+          
+          <Link className='underline hover:cursor-pointer hover:text-red-400' to={'/project/' + NameEntry.project}>{NameEntry.project}</Link> {' | '}
+          <Link className='underline hover:cursor-pointer hover:text-red-400' to={'/token/' + NameEntry.token}>#{NameEntry.number}</Link> 
+          
             <p className="artblockstext"><a href={"https://generator.artblocks.io/" + NameEntry.token} target="_blank">Art Blocks generator &rarr;</a>  </p>
             <p className="artblockstext"><a href={"https://www.artblocks.io/token/" + NameEntry.token} target="_blank">visit token on Art Blocks &rarr;</a>  </p>
           </div>

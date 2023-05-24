@@ -29,16 +29,24 @@ function SinglePost() {
   }
 
   return (
-    <div className="container mx-auto px-4 general-light">
-      <h1 className="text-3xl font-bold my-4">{post.title.rendered}</h1>
-      <h3>by {author}</h3>
-      <div dangerouslySetInnerHTML={{
-        __html: post.content.rendered
-          .replace(/<p>/g, '<p class="py-2 my-2">')
-          .replace(/<h3>/g, '<h3 class="text-xl my-1">')
-      }} />
+    <div className="flex justify-center px-2">
+      <div className="container w-full sm:w-70p mx-auto px-4 general-light" style={{ maxWidth: "1024px" }}>
+        <div className="text-center">
+          <div className="text-3xl font-bold my-4">{post.title.rendered}</div>
+          <div className="text-center pb-10">by {author}</div>
+        </div>
+        <div className="" dangerouslySetInnerHTML={{
+          __html: post.content.rendered
+            .replace(/<p>/g, '<p class="py-2 my-2">')
+            .replace(/<h3>/g, '<h3 class="text-xl my-1">')
+            .replace(/<img /g, '<img class="mx-auto" ')
+        }} />
+      </div>
     </div>
   );
+  
+  
+  
   
   
 }

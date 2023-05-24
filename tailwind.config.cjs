@@ -8,12 +8,14 @@ module.exports = {
           base: 'var(--textcolor)',
           comp: 'var(--mycolor)',
           link: 'var(--linkcolor)',
+          highlight: 'var(--highlight)',
         }
       },
       backgroundColor : {
         skin: {
           fill: 'var(--bg)',
           menu: 'var(--menucolor)',
+          menu2: 'var(--menucolor2)',
           comp: 'var(--mycolor)',
           action: 'var(--actioncolor)'
         }

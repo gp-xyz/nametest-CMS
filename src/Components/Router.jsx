@@ -17,6 +17,7 @@ import NameNav from './NameNav';
 import Post from './Post';
 import Home from './Home';
 import Test from './Test';
+import Token from './Token';
 function Router() {
   const [author,setAuthor] = useState(null)
   const [authorVotes,setAuthorVotes] = useState({})
@@ -65,6 +66,8 @@ function Router() {
         
           
         <Route path="/project/:projectName" element={<Project author={author} authorvotes={authorVotes}  theme={myTheme}/>} />
+        <Route path="/token/:tokex" element={<Token author={author} authorvotes={authorVotes}  theme={myTheme}/>} />
+        
         <Route path="/posts/:slug" element={<Post />} />
           
         <Route path="/projects" element={<ProjectList authorvotes={authorVotes} theme={myTheme}/>} />

@@ -50,7 +50,7 @@ export default function Nav({ navSignedIn, assignTheme }) {
       <div className="flex flex-col items-center ">
         <div className="text-5xl sm:text-7xl blogtitle mt-3 sm:mt-8 mb-3 sm:mb-4">Flash<span className="text-skin-comp">bulb</span>
         </div>
-        <p className="pb-2 sm:pb-5 font-serif">Original experiments in art, community and code</p>
+        <p className="pb-2 sm:pb-5 font-serif">Original experiments with art, code and community</p>
 
       </div>
 
@@ -58,8 +58,8 @@ export default function Nav({ navSignedIn, assignTheme }) {
 
         <ul className="flex flex-row justify-center w-full">
           <li className="mr-6"><Link className="nav-link" to="/">Home</Link></li>
-          <li className="mr-6"><Link className="nav-link" to="/posts">Chronicle</Link></li>
-          <li className="mr-6"><Link className="nav-link" to="/monikers">Monikers</Link></li>
+          <li className="mr-6"><Link className="nav-link special" to="/monikers">Monikers</Link></li>
+          <li className="mr-6"><Link className="nav-link" to="/posts">Chronicle</Link></li>          
           <li className="mr-6"><Link className="nav-link" to="/about">About</Link></li>
         </ul>
         <SIWE onSignIn={handleIt} hidden="true" />

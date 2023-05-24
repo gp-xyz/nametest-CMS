@@ -24,12 +24,12 @@ const Card = ({ imgSrc, text }) => (
 const Home = () => {
   const cards = [
     {
-      imgSrc: statue,
+      imgSrc: polaroid,
       text:
         "Show off your creativity by contributing a name for an Art Blocks token",
     },
     {
-      imgSrc: polaroid,
+      imgSrc: statue,
       text:
         "Discover the monikers of others in our community-driven platform",
     },
@@ -53,7 +53,7 @@ const Home = () => {
             <div className="text-3xl font-serif sm:text-4xl px-3 sm:px-6">
               
               <span className="text-black font-extrabold">Monikers</span> -  an
-              unofficial directory of names for generative art tokens
+              unofficial directory of names for Art Blocks tokens
             </div>
             <div className="pt-3 md:pt-5 grid grid-cols-2 sm:flex sm:flex-row px-3 sm:px-6">
               {cards.map((card) => (
